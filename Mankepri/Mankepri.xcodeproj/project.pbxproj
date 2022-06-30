@@ -1,0 +1,827 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1C215AE0938F0B904FD4BFEB /* Pods_MankepriTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40EFAA26E2D7A169FA43BA6 /* Pods_MankepriTests.framework */; };
+		3106B21D286E38B2009E50A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3106B21C286E38B2009E50A5 /* AppDelegate.swift */; };
+		3106B21F286E38B2009E50A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3106B21E286E38B2009E50A5 /* SceneDelegate.swift */; };
+		3106B221286E38B2009E50A5 /* TabBarMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3106B220286E38B2009E50A5 /* TabBarMainViewController.swift */; };
+		3106B224286E38B2009E50A5 /* TabBarMainViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3106B222286E38B2009E50A5 /* TabBarMainViewController.storyboard */; };
+		3106B226286E38B4009E50A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3106B225286E38B4009E50A5 /* Assets.xcassets */; };
+		3106B229286E38B4009E50A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3106B227286E38B4009E50A5 /* LaunchScreen.storyboard */; };
+		3106B234286E38B4009E50A5 /* MankepriTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3106B233286E38B4009E50A5 /* MankepriTests.swift */; };
+		3106B23E286E38B4009E50A5 /* MankepriUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3106B23D286E38B4009E50A5 /* MankepriUITests.swift */; };
+		3106B240286E38B4009E50A5 /* MankepriUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3106B23F286E38B4009E50A5 /* MankepriUITestsLaunchTests.swift */; };
+		3106B251286E3F25009E50A5 /* CustomToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3106B250286E3F25009E50A5 /* CustomToast.swift */; };
+		3106B253286E3F4F009E50A5 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3106B252286E3F4F009E50A5 /* UIViewController+Extension.swift */; };
+		744F76B640A9F9435AEA4212 /* Pods_Mankepri.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7B96A574B90F70BB9D73F2 /* Pods_Mankepri.framework */; };
+		813CE92FE2003C6FF79412E4 /* Pods_Mankepri_MankepriUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8882A8D05EB70C9524DF340 /* Pods_Mankepri_MankepriUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3106B230286E38B4009E50A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3106B211286E38B2009E50A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3106B218286E38B2009E50A5;
+			remoteInfo = Mankepri;
+		};
+		3106B23A286E38B4009E50A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3106B211286E38B2009E50A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3106B218286E38B2009E50A5;
+			remoteInfo = Mankepri;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3106B219286E38B2009E50A5 /* Mankepri.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mankepri.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3106B21C286E38B2009E50A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3106B21E286E38B2009E50A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3106B220286E38B2009E50A5 /* TabBarMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarMainViewController.swift; sourceTree = "<group>"; };
+		3106B223286E38B2009E50A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TabBarMainViewController.storyboard; sourceTree = "<group>"; };
+		3106B225286E38B4009E50A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3106B228286E38B4009E50A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3106B22A286E38B4009E50A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3106B22F286E38B4009E50A5 /* MankepriTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MankepriTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3106B233286E38B4009E50A5 /* MankepriTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MankepriTests.swift; sourceTree = "<group>"; };
+		3106B239286E38B4009E50A5 /* MankepriUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MankepriUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3106B23D286E38B4009E50A5 /* MankepriUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MankepriUITests.swift; sourceTree = "<group>"; };
+		3106B23F286E38B4009E50A5 /* MankepriUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MankepriUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3106B250286E3F25009E50A5 /* CustomToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToast.swift; sourceTree = "<group>"; };
+		3106B252286E3F4F009E50A5 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		46A3A30D6ACB76950E365E35 /* Pods-Mankepri-MankepriUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mankepri-MankepriUITests.debug.xcconfig"; path = "Target Support Files/Pods-Mankepri-MankepriUITests/Pods-Mankepri-MankepriUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		552E70E7176279232AE9BAF7 /* Pods-Mankepri-MankepriUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mankepri-MankepriUITests.release.xcconfig"; path = "Target Support Files/Pods-Mankepri-MankepriUITests/Pods-Mankepri-MankepriUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5E44363471F3C1395F3FBAD3 /* Pods-MankepriTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MankepriTests.debug.xcconfig"; path = "Target Support Files/Pods-MankepriTests/Pods-MankepriTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9C7C24CFD44F83B2183B134B /* Pods-Mankepri.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mankepri.debug.xcconfig"; path = "Target Support Files/Pods-Mankepri/Pods-Mankepri.debug.xcconfig"; sourceTree = "<group>"; };
+		B0C26510F6D7D7EFCCE6D876 /* Pods-MankepriTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MankepriTests.release.xcconfig"; path = "Target Support Files/Pods-MankepriTests/Pods-MankepriTests.release.xcconfig"; sourceTree = "<group>"; };
+		BB7B96A574B90F70BB9D73F2 /* Pods_Mankepri.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mankepri.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C76BA2A4427F6F557A8D3FFE /* Pods-Mankepri.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mankepri.release.xcconfig"; path = "Target Support Files/Pods-Mankepri/Pods-Mankepri.release.xcconfig"; sourceTree = "<group>"; };
+		E40EFAA26E2D7A169FA43BA6 /* Pods_MankepriTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MankepriTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8882A8D05EB70C9524DF340 /* Pods_Mankepri_MankepriUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mankepri_MankepriUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3106B216286E38B2009E50A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				744F76B640A9F9435AEA4212 /* Pods_Mankepri.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3106B22C286E38B4009E50A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C215AE0938F0B904FD4BFEB /* Pods_MankepriTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3106B236286E38B4009E50A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				813CE92FE2003C6FF79412E4 /* Pods_Mankepri_MankepriUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3106B210286E38B2009E50A5 = {
+			isa = PBXGroup;
+			children = (
+				3106B21B286E38B2009E50A5 /* Mankepri */,
+				3106B232286E38B4009E50A5 /* MankepriTests */,
+				3106B23C286E38B4009E50A5 /* MankepriUITests */,
+				3106B21A286E38B2009E50A5 /* Products */,
+				C2CB7FE806B432537042932F /* Pods */,
+				DD382AE9F6636CBEE59DC645 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3106B21A286E38B2009E50A5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3106B219286E38B2009E50A5 /* Mankepri.app */,
+				3106B22F286E38B4009E50A5 /* MankepriTests.xctest */,
+				3106B239286E38B4009E50A5 /* MankepriUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3106B21B286E38B2009E50A5 /* Mankepri */ = {
+			isa = PBXGroup;
+			children = (
+				3106B24C286E3EC5009E50A5 /* App */,
+				3106B24D286E3ED3009E50A5 /* PresentationLayer */,
+				3106B24E286E3F04009E50A5 /* Resources */,
+				3106B24F286E3F0B009E50A5 /* Utility */,
+			);
+			path = Mankepri;
+			sourceTree = "<group>";
+		};
+		3106B232286E38B4009E50A5 /* MankepriTests */ = {
+			isa = PBXGroup;
+			children = (
+				3106B233286E38B4009E50A5 /* MankepriTests.swift */,
+			);
+			path = MankepriTests;
+			sourceTree = "<group>";
+		};
+		3106B23C286E38B4009E50A5 /* MankepriUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3106B23D286E38B4009E50A5 /* MankepriUITests.swift */,
+				3106B23F286E38B4009E50A5 /* MankepriUITestsLaunchTests.swift */,
+			);
+			path = MankepriUITests;
+			sourceTree = "<group>";
+		};
+		3106B24C286E3EC5009E50A5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				3106B21C286E38B2009E50A5 /* AppDelegate.swift */,
+				3106B21E286E38B2009E50A5 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		3106B24D286E3ED3009E50A5 /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				3106B256286E3FEB009E50A5 /* LaunhScreen */,
+				3106B255286E3FE3009E50A5 /* TabBarMain */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		3106B24E286E3F04009E50A5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3106B22A286E38B4009E50A5 /* Info.plist */,
+				3106B225286E38B4009E50A5 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3106B24F286E3F0B009E50A5 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				3106B254286E3F71009E50A5 /* Extension */,
+				3106B250286E3F25009E50A5 /* CustomToast.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		3106B254286E3F71009E50A5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3106B252286E3F4F009E50A5 /* UIViewController+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		3106B255286E3FE3009E50A5 /* TabBarMain */ = {
+			isa = PBXGroup;
+			children = (
+				3106B220286E38B2009E50A5 /* TabBarMainViewController.swift */,
+				3106B222286E38B2009E50A5 /* TabBarMainViewController.storyboard */,
+			);
+			path = TabBarMain;
+			sourceTree = "<group>";
+		};
+		3106B256286E3FEB009E50A5 /* LaunhScreen */ = {
+			isa = PBXGroup;
+			children = (
+				3106B227286E38B4009E50A5 /* LaunchScreen.storyboard */,
+			);
+			path = LaunhScreen;
+			sourceTree = "<group>";
+		};
+		C2CB7FE806B432537042932F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9C7C24CFD44F83B2183B134B /* Pods-Mankepri.debug.xcconfig */,
+				C76BA2A4427F6F557A8D3FFE /* Pods-Mankepri.release.xcconfig */,
+				46A3A30D6ACB76950E365E35 /* Pods-Mankepri-MankepriUITests.debug.xcconfig */,
+				552E70E7176279232AE9BAF7 /* Pods-Mankepri-MankepriUITests.release.xcconfig */,
+				5E44363471F3C1395F3FBAD3 /* Pods-MankepriTests.debug.xcconfig */,
+				B0C26510F6D7D7EFCCE6D876 /* Pods-MankepriTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DD382AE9F6636CBEE59DC645 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB7B96A574B90F70BB9D73F2 /* Pods_Mankepri.framework */,
+				F8882A8D05EB70C9524DF340 /* Pods_Mankepri_MankepriUITests.framework */,
+				E40EFAA26E2D7A169FA43BA6 /* Pods_MankepriTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3106B218286E38B2009E50A5 /* Mankepri */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3106B243286E38B4009E50A5 /* Build configuration list for PBXNativeTarget "Mankepri" */;
+			buildPhases = (
+				E1BEE9199C32D83FDCA58E86 /* [CP] Check Pods Manifest.lock */,
+				3106B215286E38B2009E50A5 /* Sources */,
+				3106B216286E38B2009E50A5 /* Frameworks */,
+				3106B217286E38B2009E50A5 /* Resources */,
+				C33A46BEA3BB54ADC4956E8C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mankepri;
+			productName = Mankepri;
+			productReference = 3106B219286E38B2009E50A5 /* Mankepri.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3106B22E286E38B4009E50A5 /* MankepriTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3106B246286E38B4009E50A5 /* Build configuration list for PBXNativeTarget "MankepriTests" */;
+			buildPhases = (
+				7119C93EA5704BE5C9525633 /* [CP] Check Pods Manifest.lock */,
+				3106B22B286E38B4009E50A5 /* Sources */,
+				3106B22C286E38B4009E50A5 /* Frameworks */,
+				3106B22D286E38B4009E50A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3106B231286E38B4009E50A5 /* PBXTargetDependency */,
+			);
+			name = MankepriTests;
+			productName = MankepriTests;
+			productReference = 3106B22F286E38B4009E50A5 /* MankepriTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3106B238286E38B4009E50A5 /* MankepriUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3106B249286E38B4009E50A5 /* Build configuration list for PBXNativeTarget "MankepriUITests" */;
+			buildPhases = (
+				1FEDB29D0EA6ADA044FD4821 /* [CP] Check Pods Manifest.lock */,
+				3106B235286E38B4009E50A5 /* Sources */,
+				3106B236286E38B4009E50A5 /* Frameworks */,
+				3106B237286E38B4009E50A5 /* Resources */,
+				50DE94038605F7441BEAC407 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3106B23B286E38B4009E50A5 /* PBXTargetDependency */,
+			);
+			name = MankepriUITests;
+			productName = MankepriUITests;
+			productReference = 3106B239286E38B4009E50A5 /* MankepriUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3106B211286E38B2009E50A5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					3106B218286E38B2009E50A5 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					3106B22E286E38B4009E50A5 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 3106B218286E38B2009E50A5;
+					};
+					3106B238286E38B4009E50A5 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 3106B218286E38B2009E50A5;
+					};
+				};
+			};
+			buildConfigurationList = 3106B214286E38B2009E50A5 /* Build configuration list for PBXProject "Mankepri" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3106B210286E38B2009E50A5;
+			productRefGroup = 3106B21A286E38B2009E50A5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3106B218286E38B2009E50A5 /* Mankepri */,
+				3106B22E286E38B4009E50A5 /* MankepriTests */,
+				3106B238286E38B4009E50A5 /* MankepriUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3106B217286E38B2009E50A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3106B229286E38B4009E50A5 /* LaunchScreen.storyboard in Resources */,
+				3106B226286E38B4009E50A5 /* Assets.xcassets in Resources */,
+				3106B224286E38B2009E50A5 /* TabBarMainViewController.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3106B22D286E38B4009E50A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3106B237286E38B4009E50A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1FEDB29D0EA6ADA044FD4821 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mankepri-MankepriUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50DE94038605F7441BEAC407 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mankepri-MankepriUITests/Pods-Mankepri-MankepriUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mankepri-MankepriUITests/Pods-Mankepri-MankepriUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mankepri-MankepriUITests/Pods-Mankepri-MankepriUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7119C93EA5704BE5C9525633 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MankepriTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C33A46BEA3BB54ADC4956E8C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mankepri/Pods-Mankepri-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mankepri/Pods-Mankepri-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mankepri/Pods-Mankepri-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1BEE9199C32D83FDCA58E86 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mankepri-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3106B215286E38B2009E50A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3106B221286E38B2009E50A5 /* TabBarMainViewController.swift in Sources */,
+				3106B21D286E38B2009E50A5 /* AppDelegate.swift in Sources */,
+				3106B251286E3F25009E50A5 /* CustomToast.swift in Sources */,
+				3106B253286E3F4F009E50A5 /* UIViewController+Extension.swift in Sources */,
+				3106B21F286E38B2009E50A5 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3106B22B286E38B4009E50A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3106B234286E38B4009E50A5 /* MankepriTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3106B235286E38B4009E50A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3106B240286E38B4009E50A5 /* MankepriUITestsLaunchTests.swift in Sources */,
+				3106B23E286E38B4009E50A5 /* MankepriUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3106B231286E38B4009E50A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3106B218286E38B2009E50A5 /* Mankepri */;
+			targetProxy = 3106B230286E38B4009E50A5 /* PBXContainerItemProxy */;
+		};
+		3106B23B286E38B4009E50A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3106B218286E38B2009E50A5 /* Mankepri */;
+			targetProxy = 3106B23A286E38B4009E50A5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3106B222286E38B2009E50A5 /* TabBarMainViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3106B223286E38B2009E50A5 /* Base */,
+			);
+			name = TabBarMainViewController.storyboard;
+			sourceTree = "<group>";
+		};
+		3106B227286E38B4009E50A5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3106B228286E38B4009E50A5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3106B241286E38B4009E50A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3106B242286E38B4009E50A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3106B244286E38B4009E50A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C7C24CFD44F83B2183B134B /* Pods-Mankepri.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UT5GP7P326;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Mankepri/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ulfras.Mankepri;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3106B245286E38B4009E50A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C76BA2A4427F6F557A8D3FFE /* Pods-Mankepri.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UT5GP7P326;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Mankepri/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ulfras.Mankepri;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3106B247286E38B4009E50A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E44363471F3C1395F3FBAD3 /* Pods-MankepriTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UT5GP7P326;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ulfras.MankepriTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mankepri.app/Mankepri";
+			};
+			name = Debug;
+		};
+		3106B248286E38B4009E50A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0C26510F6D7D7EFCCE6D876 /* Pods-MankepriTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UT5GP7P326;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ulfras.MankepriTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mankepri.app/Mankepri";
+			};
+			name = Release;
+		};
+		3106B24A286E38B4009E50A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46A3A30D6ACB76950E365E35 /* Pods-Mankepri-MankepriUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UT5GP7P326;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ulfras.MankepriUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Mankepri;
+			};
+			name = Debug;
+		};
+		3106B24B286E38B4009E50A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 552E70E7176279232AE9BAF7 /* Pods-Mankepri-MankepriUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UT5GP7P326;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ulfras.MankepriUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Mankepri;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3106B214286E38B2009E50A5 /* Build configuration list for PBXProject "Mankepri" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3106B241286E38B4009E50A5 /* Debug */,
+				3106B242286E38B4009E50A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3106B243286E38B4009E50A5 /* Build configuration list for PBXNativeTarget "Mankepri" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3106B244286E38B4009E50A5 /* Debug */,
+				3106B245286E38B4009E50A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3106B246286E38B4009E50A5 /* Build configuration list for PBXNativeTarget "MankepriTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3106B247286E38B4009E50A5 /* Debug */,
+				3106B248286E38B4009E50A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3106B249286E38B4009E50A5 /* Build configuration list for PBXNativeTarget "MankepriUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3106B24A286E38B4009E50A5 /* Debug */,
+				3106B24B286E38B4009E50A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3106B211286E38B2009E50A5 /* Project object */;
+}
