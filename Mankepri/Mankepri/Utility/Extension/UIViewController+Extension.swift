@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import LocalAuthentication
 
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {
