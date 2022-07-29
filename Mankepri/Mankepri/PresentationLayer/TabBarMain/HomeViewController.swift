@@ -9,10 +9,21 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var welcomeMessageOutlet: UILabel!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if UsernameUserDefaults.check() == true {
+            let usernameDefaults = UsernameUserDefaults.get()
+            welcomeMessageOutlet.text = "Selamat Datang, \(usernameDefaults)"
+        } else {
+            welcomeMessageOutlet.text = "Selamat Datang, Pengguna"
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         UIApplication.shared.statusBarStyle = .lightContent
-        
     }
     
     @IBAction func buttonSettingTapIn(_ sender: Any) {

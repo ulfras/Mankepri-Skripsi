@@ -20,6 +20,7 @@
 		3106B251286E3F25009E50A5 /* CustomToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3106B250286E3F25009E50A5 /* CustomToast.swift */; };
 		3106B253286E3F4F009E50A5 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3106B252286E3F4F009E50A5 /* UIViewController+Extension.swift */; };
 		312219D82893286D00C0CBBD /* BiometricSwitchUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312219D72893286D00C0CBBD /* BiometricSwitchUserDefaults.swift */; };
+		312219DA2893FCD700C0CBBD /* UsernameUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312219D92893FCD700C0CBBD /* UsernameUserDefaults.swift */; };
 		315E8CEF28736E7600E192A9 /* EnterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 315E8CEE28736E7600E192A9 /* EnterViewController.storyboard */; };
 		315E8CF128736E8E00E192A9 /* EnterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E8CF028736E8E00E192A9 /* EnterViewController.swift */; };
 		31AB27792892B37F001DA042 /* SettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31AB27782892B37F001DA042 /* SettingViewController.storyboard */; };
@@ -62,6 +63,7 @@
 		3106B250286E3F25009E50A5 /* CustomToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomToast.swift; sourceTree = "<group>"; };
 		3106B252286E3F4F009E50A5 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		312219D72893286D00C0CBBD /* BiometricSwitchUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricSwitchUserDefaults.swift; sourceTree = "<group>"; };
+		312219D92893FCD700C0CBBD /* UsernameUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameUserDefaults.swift; sourceTree = "<group>"; };
 		315E8CEE28736E7600E192A9 /* EnterViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EnterViewController.storyboard; sourceTree = "<group>"; };
 		315E8CF028736E8E00E192A9 /* EnterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterViewController.swift; sourceTree = "<group>"; };
 		31AB27782892B37F001DA042 /* SettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingViewController.storyboard; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				312219D72893286D00C0CBBD /* BiometricSwitchUserDefaults.swift */,
+				312219D92893FCD700C0CBBD /* UsernameUserDefaults.swift */,
 			);
 			path = UserDefaults;
 			sourceTree = "<group>";
@@ -519,6 +522,7 @@
 			files = (
 				312219D82893286D00C0CBBD /* BiometricSwitchUserDefaults.swift in Sources */,
 				3106B221286E38B2009E50A5 /* HomeViewController.swift in Sources */,
+				312219DA2893FCD700C0CBBD /* UsernameUserDefaults.swift in Sources */,
 				3106B21D286E38B2009E50A5 /* AppDelegate.swift in Sources */,
 				31AB277B2892B388001DA042 /* SettingViewController.swift in Sources */,
 				315E8CF128736E8E00E192A9 /* EnterViewController.swift in Sources */,

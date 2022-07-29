@@ -141,6 +141,9 @@
                         <imageReference key="landscapeImage" image="square.and.arrow.up.circle.fill" catalog="system" symbolScale="large"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="jBg-uh-VO4"/>
+                    <connections>
+                        <outlet property="welcomeMessageOutlet" destination="MkP-Bv-NrX" id="6nb-qt-8CF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="06o-uK-S61" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
