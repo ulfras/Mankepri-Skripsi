@@ -21,6 +21,8 @@
 		3106B253286E3F4F009E50A5 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3106B252286E3F4F009E50A5 /* UIViewController+Extension.swift */; };
 		312219D82893286D00C0CBBD /* BiometricSwitchUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312219D72893286D00C0CBBD /* BiometricSwitchUserDefaults.swift */; };
 		312219DA2893FCD700C0CBBD /* UsernameUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312219D92893FCD700C0CBBD /* UsernameUserDefaults.swift */; };
+		3148434E28948C7500599106 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3148434D28948C7500599106 /* InfoViewController.swift */; };
+		3148435028948CA200599106 /* InfoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3148434F28948CA200599106 /* InfoViewController.storyboard */; };
 		315E8CEF28736E7600E192A9 /* EnterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 315E8CEE28736E7600E192A9 /* EnterViewController.storyboard */; };
 		315E8CF128736E8E00E192A9 /* EnterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E8CF028736E8E00E192A9 /* EnterViewController.swift */; };
 		31AB27792892B37F001DA042 /* SettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31AB27782892B37F001DA042 /* SettingViewController.storyboard */; };
@@ -64,6 +66,8 @@
 		3106B252286E3F4F009E50A5 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		312219D72893286D00C0CBBD /* BiometricSwitchUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricSwitchUserDefaults.swift; sourceTree = "<group>"; };
 		312219D92893FCD700C0CBBD /* UsernameUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameUserDefaults.swift; sourceTree = "<group>"; };
+		3148434D28948C7500599106 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		3148434F28948CA200599106 /* InfoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InfoViewController.storyboard; sourceTree = "<group>"; };
 		315E8CEE28736E7600E192A9 /* EnterViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EnterViewController.storyboard; sourceTree = "<group>"; };
 		315E8CF028736E8E00E192A9 /* EnterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterViewController.swift; sourceTree = "<group>"; };
 		31AB27782892B37F001DA042 /* SettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingViewController.storyboard; sourceTree = "<group>"; };
@@ -170,9 +174,10 @@
 		3106B24D286E3ED3009E50A5 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
-				31AB27772892B368001DA042 /* Setting */,
-				315E8CED28736E4E00E192A9 /* LocalAuthScreen */,
+				3148434C28948C6800599106 /* Info */,
 				3106B256286E3FEB009E50A5 /* LaunhScreen */,
+				315E8CED28736E4E00E192A9 /* LocalAuthScreen */,
+				31AB27772892B368001DA042 /* Setting */,
 				3106B255286E3FE3009E50A5 /* TabBarMain */,
 			);
 			path = PresentationLayer;
@@ -236,6 +241,15 @@
 				312219D92893FCD700C0CBBD /* UsernameUserDefaults.swift */,
 			);
 			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		3148434C28948C6800599106 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				3148434D28948C7500599106 /* InfoViewController.swift */,
+				3148434F28948CA200599106 /* InfoViewController.storyboard */,
+			);
+			path = Info;
 			sourceTree = "<group>";
 		};
 		315E8CED28736E4E00E192A9 /* LocalAuthScreen */ = {
@@ -391,6 +405,7 @@
 				3106B229286E38B4009E50A5 /* LaunchScreen.storyboard in Resources */,
 				315E8CEF28736E7600E192A9 /* EnterViewController.storyboard in Resources */,
 				31AB27792892B37F001DA042 /* SettingViewController.storyboard in Resources */,
+				3148435028948CA200599106 /* InfoViewController.storyboard in Resources */,
 				3106B226286E38B4009E50A5 /* Assets.xcassets in Resources */,
 				3106B224286E38B2009E50A5 /* HomeViewController.storyboard in Resources */,
 			);
@@ -524,6 +539,7 @@
 				3106B221286E38B2009E50A5 /* HomeViewController.swift in Sources */,
 				312219DA2893FCD700C0CBBD /* UsernameUserDefaults.swift in Sources */,
 				3106B21D286E38B2009E50A5 /* AppDelegate.swift in Sources */,
+				3148434E28948C7500599106 /* InfoViewController.swift in Sources */,
 				31AB277B2892B388001DA042 /* SettingViewController.swift in Sources */,
 				315E8CF128736E8E00E192A9 /* EnterViewController.swift in Sources */,
 				3106B251286E3F25009E50A5 /* CustomToast.swift in Sources */,

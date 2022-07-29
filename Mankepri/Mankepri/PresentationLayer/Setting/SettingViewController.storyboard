@@ -19,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qlT-Sr-Z6x">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pengaturan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3LB-dR-n7i">
-                                        <rect key="frame" x="161" y="66" width="92.5" height="22"/>
+                                        <rect key="frame" x="161" y="54" width="92.5" height="22"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -31,12 +31,12 @@
                                 <color key="backgroundColor" name="BaseColor"/>
                                 <constraints>
                                     <constraint firstItem="3LB-dR-n7i" firstAttribute="centerX" secondItem="qlT-Sr-Z6x" secondAttribute="centerX" id="5gA-GI-JLu"/>
-                                    <constraint firstAttribute="height" constant="100" id="Wfo-h3-VXF"/>
+                                    <constraint firstAttribute="height" constant="88" id="Wfo-h3-VXF"/>
                                     <constraint firstAttribute="bottom" secondItem="3LB-dR-n7i" secondAttribute="bottom" constant="12" id="ioi-FA-Jm6"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hbr-bJ-Eg4" userLabel="usernameView">
-                                <rect key="frame" x="0.0" y="113" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="101" width="414" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nama Pengguna" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rh3-P1-dd1">
                                         <rect key="frame" x="17" y="14.5" width="130" height="21"/>
@@ -84,13 +84,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menampilkan nama pengguna pada beranda." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vMX-6s-VcN">
-                                <rect key="frame" x="17" y="173" width="380" height="15"/>
+                                <rect key="frame" x="17" y="161" width="380" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k3A-ha-Blb" userLabel="biometricView">
-                                <rect key="frame" x="0.0" y="216" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="204" width="414" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Face ID / Touch ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7j-6n-S7N">
                                         <rect key="frame" x="17" y="14.5" width="137" height="21"/>
@@ -115,7 +115,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jika diaktifkan, Anda memerlukan Face ID / Touch ID untuk mengakses aplikasi. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VA6-VD-dcH">
-                                <rect key="frame" x="17" y="276" width="380" height="35"/>
+                                <rect key="frame" x="17" y="264" width="380" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="PYD-qJ-Fh5"/>
                                 </constraints>
@@ -124,7 +124,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzK-nm-y2j">
-                                <rect key="frame" x="17" y="425" width="380" height="40"/>
+                                <rect key="frame" x="17" y="413" width="380" height="40"/>
                                 <color key="backgroundColor" name="BaseColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="RHr-md-FjP"/>
@@ -139,7 +139,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QPX-6d-hsX">
-                                <rect key="frame" x="0.0" y="339" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="327" width="414" height="50"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="4KD-f8-B25"/>

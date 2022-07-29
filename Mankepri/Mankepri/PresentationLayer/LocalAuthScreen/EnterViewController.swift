@@ -52,6 +52,6 @@ final class EnterViewController: UIViewController {
     func goToHomeViewController() {
         let viewController = UIStoryboard(name: "HomeViewController", bundle:nil).instantiateViewController(withIdentifier: "HomeViewController")
         viewController.modalPresentationStyle = .fullScreen
-        self.present(viewController, animated:true, completion:nil)
+        self.present(viewController, animated: true, completion:nil)
     }
 }

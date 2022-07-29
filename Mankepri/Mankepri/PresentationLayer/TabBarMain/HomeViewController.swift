@@ -31,4 +31,11 @@ class HomeViewController: UIViewController {
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "SettingViewController")
         self.navigationController?.pushViewController(nextViewController, animated: true)
     }
+    
+    
+    @IBAction func tabBarButtonInfoTapIn(_ sender: Any) {
+        let viewController = UIStoryboard(name: "InfoViewController", bundle:nil).instantiateViewController(withIdentifier: "InfoViewController")
+        viewController.modalPresentationStyle = .fullScreen
+        self.present(viewController, animated: false, completion:nil)
+    }
 }
