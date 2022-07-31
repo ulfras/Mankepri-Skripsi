@@ -13,7 +13,7 @@
         <!--Item-->
         <scene sceneID="YTe-MX-tGT">
             <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="L0M-1i-epc" customClass="HomeViewController" customModule="Mankepri" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" interfaceStyle="light" id="L0M-1i-epc" customClass="HomeViewController" customModule="Mankepri" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CNa-Yv-w2O">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -158,6 +158,9 @@
                                                     <constraint firstAttribute="height" constant="40" id="z8d-dC-vWz"/>
                                                 </constraints>
                                                 <state key="normal" title="MenuTransaksi" image="CashFlowGrey"/>
+                                                <connections>
+                                                    <action selector="transactionButtonTapIn:" destination="L0M-1i-epc" eventType="touchUpInside" id="l18-zP-f3f"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
