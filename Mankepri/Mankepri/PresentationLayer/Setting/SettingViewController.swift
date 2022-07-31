@@ -46,7 +46,10 @@ final class SettingViewController: UIViewController {
     }
     
     func changeNameAlert() {
-        let alert = UIAlertController(title: "Ubah Nama.", message: "Masukan nama pengguna", preferredStyle: .alert)
+        let alert = UIAlertController(
+            title: "Ubah Nama.",
+            message: "Masukan nama pengguna",
+            preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Batal", style: .destructive, handler: { ACTION in }))
         alert.addTextField { textfield in
             textfield.textAlignment = .center
@@ -68,14 +71,14 @@ final class SettingViewController: UIViewController {
     }
     
     func resetButtonAlert() {
-        let alert = UIAlertController(title: "Peringatan!", message: "Anda akan menghapus seluruh data aplikasi.", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Peringatan!", message: "Anda akan menghapus data yang anda pilih pada aplikasi.", preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Batal", style: .cancel, handler: { ACTION in }))
-        alert.addAction(UIAlertAction(title: "Hapus", style: .destructive) { ACTION in
+        alert.addAction(UIAlertAction(title: "Hapus Seluruh Data", style: .destructive) { ACTION in
             if let domain = Bundle.main.bundleIdentifier {
                 UserDefaults.standard.removePersistentDomain(forName: domain)
             }
             CustomToast.show(
-                message: "Berhasil hapus data, \nSilahkan buka aplikasi kembali.",
+                message: "Berhasil hapus seluruh data, \nSilahkan buka aplikasi kembali.",
                 bgColor: .systemGreen,
                 textColor: .white,
                 labelFont: .systemFont(ofSize: 17),
@@ -83,6 +86,19 @@ final class SettingViewController: UIViewController {
                 controller: self)
             self.closeApp()
         })
+        alert.addAction(UIAlertAction(
+            title: "Hapus Kategori",
+            style: .destructive, handler: { ACTION in
+                CategoryDataDefaults.delete()
+                CustomToast.show(
+                    message: "Berhasil hapus kategori.",
+                    bgColor: .systemGreen,
+                    textColor: .white,
+                    labelFont: .systemFont(ofSize: 17),
+                    showIn: .bottom,
+                    controller: self)
+
+            }))
         self.present(alert, animated: true)
     }
     

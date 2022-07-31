@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import DropDown
 
 final class TransactionViewController: UIViewController {
     
@@ -21,7 +22,16 @@ final class TransactionViewController: UIViewController {
     @IBOutlet weak var categoryTextFieldOutlet: UITextField!
     @IBOutlet weak var descriptionTextFieldOutlet: UITextField!
     
+    private let dropDown = DropDown()
     private var categoryData: [String] = ["Gaji", "Bonus", "Hadiah", "Pinjaman"]
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if CategoryDataDefaults.check() == true {
+            categoryData = CategoryDataDefaults.get()
+        }
+        CategoryDropDown()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +59,11 @@ final class TransactionViewController: UIViewController {
     }
     
     @IBAction func categoryButtonTapIn(_ sender: Any) {
+        dropDown.show()
+    }
+    
+    @IBAction func addCategoryDataButtonTapIn(_ sender: Any) {
+        AddCategoryData()
     }
     
     @IBAction func addTransactionButtonTapIn(_ sender: Any) {
@@ -62,5 +77,36 @@ final class TransactionViewController: UIViewController {
         let viewController = UIStoryboard(name: "HomeViewController", bundle:nil).instantiateViewController(withIdentifier: "HomeViewController")
         viewController.modalPresentationStyle = .fullScreen
         self.present(viewController, animated: false, completion:nil)
+    }
+    
+    private func CategoryDropDown() {
+        dropDown.anchorView = categoryTextFieldOutlet
+        dropDown.dataSource = categoryData
+        dropDown.bottomOffset = CGPoint(x: 0, y:(dropDown.anchorView?.plainView.bounds.height)!)
+        dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+            self.categoryTextFieldOutlet.text = categoryData[index]
+        }
+    }
+    
+    func AddCategoryData() {
+        let alert = UIAlertController(
+            title: "Tambah Kategori",
+            message: nil,
+            preferredStyle: .alert)
+        alert.addTextField {
+            textField in
+            textField.textAlignment = .center
+            textField.placeholder = "Maks. 10 huruf"
+        }
+        alert.addAction(UIAlertAction(title: "Batal", style: .destructive))
+        alert.addAction(UIAlertAction(
+            title: "Tambah", style: .default,
+            handler: { ACTION in
+                let textFieldValue = alert.textFields?.first?.text
+                self.categoryData.append(textFieldValue!)
+                self.dropDown.dataSource = self.categoryData
+                CategoryDataDefaults.save(self.categoryData)
+        }))
+        self.present(alert, animated: true)
     }
 }

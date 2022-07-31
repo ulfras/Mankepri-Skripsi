@@ -145,7 +145,7 @@
                                     <constraint firstAttribute="height" constant="50" id="4KD-f8-B25"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Hapus Seluruh Data">
+                                <buttonConfiguration key="configuration" style="plain" title="Hapus Data">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
                                     <color key="baseForegroundColor" name="ColorPengeluaran"/>
                                 </buttonConfiguration>
