@@ -7,8 +7,29 @@
 
 import Foundation
 
-struct CategoryDataDefaults {
-    static let key = "CategoryData"
+struct CategoryDataIncomeDefaults {
+    static let key = "CategoryDataIncome"
+    static let userDefaults = UserDefaults.standard
+    
+    static func save(_ value: [String]) {
+        userDefaults.set(value, forKey: key)
+    }
+    
+    static func get() -> [String] {
+        return userDefaults.stringArray(forKey: key)!
+    }
+    
+    static func check() -> Bool {
+        return UserDefaults.standard.object(forKey: key) != nil
+    }
+    
+    static func delete() {
+        UserDefaults.standard.removeObject(forKey: key)
+    }
+}
+
+struct CategoryDataSpendingDefaults {
+    static let key = "CategoryDataSpending"
     static let userDefaults = UserDefaults.standard
     
     static func save(_ value: [String]) {

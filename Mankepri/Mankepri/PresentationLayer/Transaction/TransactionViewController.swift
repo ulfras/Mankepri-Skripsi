@@ -21,21 +21,35 @@ final class TransactionViewController: UIViewController {
     @IBOutlet weak var moneyAmountTextFieldOutlet: UITextField!
     @IBOutlet weak var categoryTextFieldOutlet: UITextField!
     @IBOutlet weak var descriptionTextFieldOutlet: UITextField!
+    @IBOutlet weak var addTransactionButtonOutlet: UIButton!
+    @IBOutlet weak var transactionListButtonOutlet: UIButton!
     
-    private let dropDown = DropDown()
-    private var categoryData: [String] = ["Gaji", "Bonus", "Hadiah", "Pinjaman"]
+    private let dropDownIncome = DropDown()
+    private let dropDownSpending = DropDown()
+    private var categoryDataIncome: [String] = ["Gaji", "Bonus", "Hadiah", "Pinjaman"]
+    
+    private var categoryDataSpending:[String] = ["Konsumsi", "Belanja Umum", "Belanja Online", "Transportasi"]
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if CategoryDataDefaults.check() == true {
-            categoryData = CategoryDataDefaults.get()
+        if CategoryDataIncomeDefaults.check() == true {
+            categoryDataIncome = CategoryDataIncomeDefaults.get()
+            print(categoryDataIncome)
         }
-        CategoryDropDown()
+        CategoryDropDownIncome()
+        
+        if CategoryDataSpendingDefaults.check() == true {
+            categoryDataSpending = CategoryDataSpendingDefaults.get()
+            print(categoryDataSpending)
+        }
+        CategoryDropDownSpending()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         categoryTextFieldOutlet.isUserInteractionEnabled = false
+        addTransactionButtonOutlet.layer.cornerRadius = 8
+        transactionListButtonOutlet.layer.cornerRadius = 8
     }
     
     @IBAction func incomeButtonTapIn(_ sender: Any) {
@@ -59,11 +73,20 @@ final class TransactionViewController: UIViewController {
     }
     
     @IBAction func categoryButtonTapIn(_ sender: Any) {
-        dropDown.show()
+        if spendingLabelOutlet.textColor == .black {
+            dropDownSpending.show()
+        } else {
+            dropDownIncome.show()
+        }
+        
     }
     
     @IBAction func addCategoryDataButtonTapIn(_ sender: Any) {
-        AddCategoryData()
+        if spendingLabelOutlet.textColor == .black {
+            AddCategoryDataSpending()
+        } else {
+            AddCategoryDataIncome()
+        }
     }
     
     @IBAction func addTransactionButtonTapIn(_ sender: Any) {
@@ -79,18 +102,27 @@ final class TransactionViewController: UIViewController {
         self.present(viewController, animated: false, completion:nil)
     }
     
-    private func CategoryDropDown() {
-        dropDown.anchorView = categoryTextFieldOutlet
-        dropDown.dataSource = categoryData
-        dropDown.bottomOffset = CGPoint(x: 0, y:(dropDown.anchorView?.plainView.bounds.height)!)
-        dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
-            self.categoryTextFieldOutlet.text = categoryData[index]
+    private func CategoryDropDownIncome() {
+        dropDownIncome.anchorView = categoryTextFieldOutlet
+        dropDownIncome.dataSource = categoryDataIncome
+        dropDownIncome.bottomOffset = CGPoint(x: 0, y:(dropDownIncome.anchorView?.plainView.bounds.height)!)
+        dropDownIncome.selectionAction = { [unowned self] (index: Int, item: String) in
+            self.categoryTextFieldOutlet.text = categoryDataIncome[index]
         }
     }
     
-    func AddCategoryData() {
+    private func CategoryDropDownSpending() {
+        dropDownSpending.anchorView = categoryTextFieldOutlet
+        dropDownSpending.dataSource = categoryDataSpending
+        dropDownSpending.bottomOffset = CGPoint(x: 0, y:(dropDownIncome.anchorView?.plainView.bounds.height)!)
+        dropDownSpending.selectionAction = { [unowned self] (index: Int, item: String) in
+            self.categoryTextFieldOutlet.text = categoryDataSpending[index]
+        }
+    }
+    
+    func AddCategoryDataIncome() {
         let alert = UIAlertController(
-            title: "Tambah Kategori",
+            title: "Tambah Kategori Pemasukan",
             message: nil,
             preferredStyle: .alert)
         alert.addTextField {
@@ -103,9 +135,31 @@ final class TransactionViewController: UIViewController {
             title: "Tambah", style: .default,
             handler: { ACTION in
                 let textFieldValue = alert.textFields?.first?.text
-                self.categoryData.append(textFieldValue!)
-                self.dropDown.dataSource = self.categoryData
-                CategoryDataDefaults.save(self.categoryData)
+                self.categoryDataIncome.append(textFieldValue!)
+                self.dropDownIncome.dataSource = self.categoryDataIncome
+                CategoryDataIncomeDefaults.save(self.categoryDataIncome)
+        }))
+        self.present(alert, animated: true)
+    }
+    
+    func AddCategoryDataSpending() {
+        let alert = UIAlertController(
+            title: "Tambah Kategori Pengeluaran",
+            message: nil,
+            preferredStyle: .alert)
+        alert.addTextField {
+            textField in
+            textField.textAlignment = .center
+            textField.placeholder = "Maks. 10 huruf"
+        }
+        alert.addAction(UIAlertAction(title: "Batal", style: .destructive))
+        alert.addAction(UIAlertAction(
+            title: "Tambah", style: .default,
+            handler: { ACTION in
+                let textFieldValue = alert.textFields?.first?.text
+                self.categoryDataSpending.append(textFieldValue!)
+                self.dropDownSpending.dataSource = self.categoryDataSpending
+                CategoryDataSpendingDefaults.save(self.categoryDataSpending)
         }))
         self.present(alert, animated: true)
     }

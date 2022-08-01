@@ -191,7 +191,7 @@
                                         <rect key="frame" x="230" y="0.0" width="61.5" height="80"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZh-kH-6TC">
-                                                <rect key="frame" x="10.5" y="15" width="40" height="40"/>
+                                                <rect key="frame" x="16.5" y="15" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="40" id="AE4-3H-WLX"/>
                                                     <constraint firstAttribute="height" constant="40" id="Flv-BX-Ezx"/>
@@ -200,8 +200,8 @@
                                             </button>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="dZh-kH-6TC" secondAttribute="trailing" constant="5" id="Fvj-9z-Wtg"/>
                                             <constraint firstItem="dZh-kH-6TC" firstAttribute="top" secondItem="RXV-fW-o9h" secondAttribute="top" constant="15" id="HcD-8p-QeI"/>
-                                            <constraint firstItem="dZh-kH-6TC" firstAttribute="centerX" secondItem="RXV-fW-o9h" secondAttribute="centerX" id="bOj-8m-Zar"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BYl-CT-XfE">
@@ -378,6 +378,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addTransactionButtonOutlet" destination="BZd-8P-vro" id="AdJ-8O-gxA"/>
                         <outlet property="categoryTextFieldOutlet" destination="dPK-e3-DVd" id="YK4-5P-v6u"/>
                         <outlet property="descriptionTextFieldOutlet" destination="eRF-Ad-wv8" id="nhE-1j-hJB"/>
                         <outlet property="incomeImageOutlet" destination="c9T-Me-Dxq" id="CnT-ew-mLN"/>
@@ -387,6 +388,7 @@
                         <outlet property="spendingImageOutlet" destination="zbB-QD-OVu" id="0GC-xj-ZSn"/>
                         <outlet property="spendingLabelOutlet" destination="4dQ-48-YwK" id="GnY-Dt-rex"/>
                         <outlet property="spendingViewOutlet" destination="J1F-TR-BNQ" id="oAv-R4-zXW"/>
+                        <outlet property="transactionListButtonOutlet" destination="UnV-fX-oQG" id="cfX-f2-Kf9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

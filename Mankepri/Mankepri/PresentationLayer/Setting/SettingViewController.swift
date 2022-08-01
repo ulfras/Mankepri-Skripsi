@@ -71,7 +71,7 @@ final class SettingViewController: UIViewController {
     }
     
     func resetButtonAlert() {
-        let alert = UIAlertController(title: "Peringatan!", message: "Anda akan menghapus data yang anda pilih pada aplikasi.", preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: "Peringatan!", message: "Anda akan menghapus data yang anda pilih.", preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Batal", style: .cancel, handler: { ACTION in }))
         alert.addAction(UIAlertAction(title: "Hapus Seluruh Data", style: .destructive) { ACTION in
             if let domain = Bundle.main.bundleIdentifier {
@@ -87,11 +87,25 @@ final class SettingViewController: UIViewController {
             self.closeApp()
         })
         alert.addAction(UIAlertAction(
-            title: "Hapus Kategori",
+            title: "Hapus Kategori Pemasukan",
             style: .destructive, handler: { ACTION in
-                CategoryDataDefaults.delete()
+                CategoryDataIncomeDefaults.delete()
                 CustomToast.show(
-                    message: "Berhasil hapus kategori.",
+                    message: "Berhasil hapus kategori pemasukan.",
+                    bgColor: .systemGreen,
+                    textColor: .white,
+                    labelFont: .systemFont(ofSize: 17),
+                    showIn: .bottom,
+                    controller: self)
+
+            }))
+        
+        alert.addAction(UIAlertAction(
+            title: "Hapus Kategori Pengeluaran",
+            style: .destructive, handler: { ACTION in
+                CategoryDataSpendingDefaults.delete()
+                CustomToast.show(
+                    message: "Berhasil hapus kategori pengeluaran.",
                     bgColor: .systemGreen,
                     textColor: .white,
                     labelFont: .systemFont(ofSize: 17),

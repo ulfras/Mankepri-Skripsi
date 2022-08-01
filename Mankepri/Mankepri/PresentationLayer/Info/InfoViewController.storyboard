@@ -103,7 +103,7 @@
                                         <rect key="frame" x="230" y="0.0" width="61.5" height="80"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3H-gW-P61">
-                                                <rect key="frame" x="10.5" y="15" width="40" height="40"/>
+                                                <rect key="frame" x="14.5" y="15" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="AXz-my-DRW"/>
                                                     <constraint firstAttribute="width" constant="40" id="jzv-wg-i8w"/>
@@ -112,8 +112,8 @@
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="u3H-gW-P61" firstAttribute="top" secondItem="GdE-rT-61G" secondAttribute="top" constant="15" id="HRt-4T-bwq"/>
-                                            <constraint firstItem="u3H-gW-P61" firstAttribute="centerX" secondItem="GdE-rT-61G" secondAttribute="centerX" id="R5g-Dz-pQM"/>
+                                            <constraint firstItem="u3H-gW-P61" firstAttribute="top" secondItem="GdE-rT-61G" secondAttribute="top" constant="15" id="klG-Z7-NVr"/>
+                                            <constraint firstItem="u3H-gW-P61" firstAttribute="centerX" secondItem="GdE-rT-61G" secondAttribute="centerX" constant="4" id="owY-LB-BDq"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nj4-0f-Zpb">
