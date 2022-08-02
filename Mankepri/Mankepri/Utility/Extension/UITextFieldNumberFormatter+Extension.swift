@@ -25,7 +25,7 @@ class IntegerField: UITextField {
         addTarget(self, action: #selector(editingChanged), for: .editingChanged)
     }
     @objc func editingChanged(_ textField: UITextField) {
-        text = Formatter.decimal.string(for: amount)
+    text = Formatter.decimal.string(for: amount)
     }
 }
 
@@ -37,7 +37,12 @@ extension NumberFormatter {
 }
 
 struct Formatter {
-    static let decimal = NumberFormatter(numberStyle: .decimal)
+    static let decimal: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.groupingSeparator = "."
+        return formatter
+    }()
 }
 
 extension UITextField {

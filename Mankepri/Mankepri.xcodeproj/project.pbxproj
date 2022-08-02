@@ -29,8 +29,14 @@
 		315E8CF128736E8E00E192A9 /* EnterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315E8CF028736E8E00E192A9 /* EnterViewController.swift */; };
 		3169D82528970ED700EA3BC6 /* CategoryDataUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3169D82428970ED700EA3BC6 /* CategoryDataUserDefaults.swift */; };
 		3169D8272897948100EA3BC6 /* UITextFieldNumberFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3169D8262897948100EA3BC6 /* UITextFieldNumberFormatter+Extension.swift */; };
+		3169D82928979F5600EA3BC6 /* NumberFormater+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3169D82828979F5600EA3BC6 /* NumberFormater+Extension.swift */; };
 		31AB27792892B37F001DA042 /* SettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31AB27782892B37F001DA042 /* SettingViewController.storyboard */; };
 		31AB277B2892B388001DA042 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AB277A2892B388001DA042 /* SettingViewController.swift */; };
+		31D8842C2899C3C700824C90 /* TransactionListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31D8842B2899C3C700824C90 /* TransactionListViewController.storyboard */; };
+		31D8842E2899C3CD00824C90 /* TransactionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D8842D2899C3CD00824C90 /* TransactionListViewController.swift */; };
+		31D884322899C5A400824C90 /* TransactionListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D884302899C5A400824C90 /* TransactionListCell.swift */; };
+		31D884332899C5A400824C90 /* TransactionListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31D884312899C5A400824C90 /* TransactionListCell.xib */; };
+		31E1E6002899D027006F47D6 /* TransactionDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E1E5FF2899D027006F47D6 /* TransactionDataModel.swift */; };
 		744F76B640A9F9435AEA4212 /* Pods_Mankepri.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7B96A574B90F70BB9D73F2 /* Pods_Mankepri.framework */; };
 		813CE92FE2003C6FF79412E4 /* Pods_Mankepri_MankepriUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8882A8D05EB70C9524DF340 /* Pods_Mankepri_MankepriUITests.framework */; };
 /* End PBXBuildFile section */
@@ -78,8 +84,14 @@
 		315E8CF028736E8E00E192A9 /* EnterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterViewController.swift; sourceTree = "<group>"; };
 		3169D82428970ED700EA3BC6 /* CategoryDataUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDataUserDefaults.swift; sourceTree = "<group>"; };
 		3169D8262897948100EA3BC6 /* UITextFieldNumberFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextFieldNumberFormatter+Extension.swift"; sourceTree = "<group>"; };
+		3169D82828979F5600EA3BC6 /* NumberFormater+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormater+Extension.swift"; sourceTree = "<group>"; };
 		31AB27782892B37F001DA042 /* SettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingViewController.storyboard; sourceTree = "<group>"; };
 		31AB277A2892B388001DA042 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		31D8842B2899C3C700824C90 /* TransactionListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransactionListViewController.storyboard; sourceTree = "<group>"; };
+		31D8842D2899C3CD00824C90 /* TransactionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListViewController.swift; sourceTree = "<group>"; };
+		31D884302899C5A400824C90 /* TransactionListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListCell.swift; sourceTree = "<group>"; };
+		31D884312899C5A400824C90 /* TransactionListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionListCell.xib; sourceTree = "<group>"; };
+		31E1E5FF2899D027006F47D6 /* TransactionDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDataModel.swift; sourceTree = "<group>"; };
 		46A3A30D6ACB76950E365E35 /* Pods-Mankepri-MankepriUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mankepri-MankepriUITests.debug.xcconfig"; path = "Target Support Files/Pods-Mankepri-MankepriUITests/Pods-Mankepri-MankepriUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		552E70E7176279232AE9BAF7 /* Pods-Mankepri-MankepriUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mankepri-MankepriUITests.release.xcconfig"; path = "Target Support Files/Pods-Mankepri-MankepriUITests/Pods-Mankepri-MankepriUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5E44363471F3C1395F3FBAD3 /* Pods-MankepriTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MankepriTests.debug.xcconfig"; path = "Target Support Files/Pods-MankepriTests/Pods-MankepriTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -182,11 +194,12 @@
 		3106B24D286E3ED3009E50A5 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				31D8842A2899C3B300824C90 /* TransactionList */,
 				3148434C28948C6800599106 /* Info */,
 				3106B256286E3FEB009E50A5 /* LaunhScreen */,
-				315E8CED28736E4E00E192A9 /* LocalAuthScreen */,
+				315E8CED28736E4E00E192A9 /* Enter */,
 				31AB27772892B368001DA042 /* Setting */,
-				3106B255286E3FE3009E50A5 /* TabBarMain */,
+				3106B255286E3FE3009E50A5 /* Home */,
 				314843532896F98200599106 /* Transaction */,
 			);
 			path = PresentationLayer;
@@ -215,17 +228,18 @@
 			children = (
 				3106B252286E3F4F009E50A5 /* UIViewController+Extension.swift */,
 				3169D8262897948100EA3BC6 /* UITextFieldNumberFormatter+Extension.swift */,
+				3169D82828979F5600EA3BC6 /* NumberFormater+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		3106B255286E3FE3009E50A5 /* TabBarMain */ = {
+		3106B255286E3FE3009E50A5 /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				3106B220286E38B2009E50A5 /* HomeViewController.swift */,
 				3106B222286E38B2009E50A5 /* HomeViewController.storyboard */,
 			);
-			path = TabBarMain;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		3106B256286E3FEB009E50A5 /* LaunhScreen */ = {
@@ -239,6 +253,7 @@
 		312219D52893251500C0CBBD /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
+				31E1E5FE2899D015006F47D6 /* Model */,
 				312219D62893251B00C0CBBD /* UserDefaults */,
 			);
 			path = DataLayer;
@@ -272,13 +287,13 @@
 			path = Transaction;
 			sourceTree = "<group>";
 		};
-		315E8CED28736E4E00E192A9 /* LocalAuthScreen */ = {
+		315E8CED28736E4E00E192A9 /* Enter */ = {
 			isa = PBXGroup;
 			children = (
 				315E8CEE28736E7600E192A9 /* EnterViewController.storyboard */,
 				315E8CF028736E8E00E192A9 /* EnterViewController.swift */,
 			);
-			path = LocalAuthScreen;
+			path = Enter;
 			sourceTree = "<group>";
 		};
 		31AB27772892B368001DA042 /* Setting */ = {
@@ -288,6 +303,33 @@
 				31AB277A2892B388001DA042 /* SettingViewController.swift */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		31D8842A2899C3B300824C90 /* TransactionList */ = {
+			isa = PBXGroup;
+			children = (
+				31D8842F2899C58F00824C90 /* Cell */,
+				31D8842B2899C3C700824C90 /* TransactionListViewController.storyboard */,
+				31D8842D2899C3CD00824C90 /* TransactionListViewController.swift */,
+			);
+			path = TransactionList;
+			sourceTree = "<group>";
+		};
+		31D8842F2899C58F00824C90 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				31D884302899C5A400824C90 /* TransactionListCell.swift */,
+				31D884312899C5A400824C90 /* TransactionListCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		31E1E5FE2899D015006F47D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				31E1E5FF2899D027006F47D6 /* TransactionDataModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		C2CB7FE806B432537042932F /* Pods */ = {
@@ -422,11 +464,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31D8842C2899C3C700824C90 /* TransactionListViewController.storyboard in Resources */,
 				3106B229286E38B4009E50A5 /* LaunchScreen.storyboard in Resources */,
 				315E8CEF28736E7600E192A9 /* EnterViewController.storyboard in Resources */,
 				31AB27792892B37F001DA042 /* SettingViewController.storyboard in Resources */,
 				3148435028948CA200599106 /* InfoViewController.storyboard in Resources */,
 				314843572896F9DD00599106 /* TransactionViewController.storyboard in Resources */,
+				31D884332899C5A400824C90 /* TransactionListCell.xib in Resources */,
 				3106B226286E38B4009E50A5 /* Assets.xcassets in Resources */,
 				3106B224286E38B2009E50A5 /* HomeViewController.storyboard in Resources */,
 			);
@@ -557,15 +601,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				312219D82893286D00C0CBBD /* BiometricSwitchUserDefaults.swift in Sources */,
+				31D8842E2899C3CD00824C90 /* TransactionListViewController.swift in Sources */,
 				3106B221286E38B2009E50A5 /* HomeViewController.swift in Sources */,
 				312219DA2893FCD700C0CBBD /* UsernameUserDefaults.swift in Sources */,
 				3106B21D286E38B2009E50A5 /* AppDelegate.swift in Sources */,
 				3148434E28948C7500599106 /* InfoViewController.swift in Sources */,
+				31D884322899C5A400824C90 /* TransactionListCell.swift in Sources */,
 				31AB277B2892B388001DA042 /* SettingViewController.swift in Sources */,
 				315E8CF128736E8E00E192A9 /* EnterViewController.swift in Sources */,
 				3106B251286E3F25009E50A5 /* CustomToast.swift in Sources */,
+				3169D82928979F5600EA3BC6 /* NumberFormater+Extension.swift in Sources */,
 				3169D82528970ED700EA3BC6 /* CategoryDataUserDefaults.swift in Sources */,
 				3106B253286E3F4F009E50A5 /* UIViewController+Extension.swift in Sources */,
+				31E1E6002899D027006F47D6 /* TransactionDataModel.swift in Sources */,
 				3169D8272897948100EA3BC6 /* UITextFieldNumberFormatter+Extension.swift in Sources */,
 				3106B21F286E38B2009E50A5 /* SceneDelegate.swift in Sources */,
 				314843552896F9B300599106 /* TransactionViewController.swift in Sources */,

@@ -16,7 +16,6 @@ final class InfoViewController: UIViewController {
         creatorImageViewOutlet.layer.cornerRadius = creatorImageViewOutlet.frame.size.width/2
     }
     
-    
     @IBAction func tabBarButtonHomeTapIn(_ sender: Any) {
         let viewController = UIStoryboard(name: "HomeViewController", bundle:nil).instantiateViewController(withIdentifier: "HomeViewController")
         viewController.modalPresentationStyle = .fullScreen

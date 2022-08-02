@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sef-6b-Eh6">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -10,6 +10,21 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="2xa-6n-306">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="sef-6b-Eh6" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gmY-B1-osO">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="wkR-Z9-5wO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TBU-UY-dBO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-654" y="64"/>
+        </scene>
         <!--Transaction View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
@@ -54,13 +69,13 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pemasukan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atM-BM-wAk">
-                                                <rect key="frame" x="21" y="40" width="89.5" height="20"/>
+                                                <rect key="frame" x="24" y="40" width="89.5" height="20"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PemasukanColor" translatesAutoresizingMaskIntoConstraints="NO" id="c9T-Me-Dxq" userLabel="IncomeImage">
-                                                <rect key="frame" x="120.5" y="20" width="60" height="60"/>
+                                                <rect key="frame" x="118.5" y="20" width="60" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="60" id="K3v-6z-gNu"/>
                                                     <constraint firstAttribute="height" constant="60" id="dFq-1O-sWm"/>
@@ -68,13 +83,13 @@
                                             </imageView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="atM-BM-wAk" firstAttribute="leading" secondItem="4bF-Ss-wnC" secondAttribute="leading" constant="21" id="4ru-Vl-8kg"/>
                                             <constraint firstItem="c9T-Me-Dxq" firstAttribute="centerY" secondItem="4bF-Ss-wnC" secondAttribute="centerY" id="QY5-2i-mkL"/>
                                             <constraint firstItem="atM-BM-wAk" firstAttribute="centerY" secondItem="4bF-Ss-wnC" secondAttribute="centerY" id="RXB-Kb-WOC"/>
+                                            <constraint firstItem="c9T-Me-Dxq" firstAttribute="centerX" secondItem="4bF-Ss-wnC" secondAttribute="centerX" constant="45" id="Uaf-GO-a5L"/>
                                             <constraint firstAttribute="bottom" secondItem="D1i-ZN-ffJ" secondAttribute="bottom" id="VL9-eP-K9G"/>
                                             <constraint firstItem="D1i-ZN-ffJ" firstAttribute="top" secondItem="4bF-Ss-wnC" secondAttribute="top" id="aof-GI-bES"/>
                                             <constraint firstAttribute="trailing" secondItem="D1i-ZN-ffJ" secondAttribute="trailing" id="ijd-Ey-AFy"/>
-                                            <constraint firstItem="c9T-Me-Dxq" firstAttribute="leading" secondItem="atM-BM-wAk" secondAttribute="trailing" constant="10" id="m1R-ed-wga"/>
+                                            <constraint firstItem="c9T-Me-Dxq" firstAttribute="leading" secondItem="atM-BM-wAk" secondAttribute="trailing" constant="5" id="m1R-ed-wga"/>
                                             <constraint firstItem="D1i-ZN-ffJ" firstAttribute="leading" secondItem="4bF-Ss-wnC" secondAttribute="leading" id="xd5-w1-Ngw"/>
                                         </constraints>
                                     </view>
@@ -90,14 +105,14 @@
                                                 </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PengeluaranWhite" translatesAutoresizingMaskIntoConstraints="NO" id="zbB-QD-OVu" userLabel="SpendingImage">
-                                                <rect key="frame" x="129" y="20" width="60" height="60"/>
+                                                <rect key="frame" x="123.5" y="20" width="60" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="60" id="7GO-x3-tPa"/>
                                                     <constraint firstAttribute="height" constant="60" id="TFc-Up-DjH"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pengeluaran" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dQ-48-YwK">
-                                                <rect key="frame" x="28.5" y="40" width="95.5" height="20"/>
+                                                <rect key="frame" x="23" y="40" width="95.5" height="20"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -110,8 +125,8 @@
                                             <constraint firstItem="zbB-QD-OVu" firstAttribute="leading" secondItem="4dQ-48-YwK" secondAttribute="trailing" constant="5" id="Gie-PQ-uKk"/>
                                             <constraint firstItem="nmL-hk-gL7" firstAttribute="leading" secondItem="J1F-TR-BNQ" secondAttribute="leading" id="SH3-Mu-4A3"/>
                                             <constraint firstItem="zbB-QD-OVu" firstAttribute="centerY" secondItem="J1F-TR-BNQ" secondAttribute="centerY" id="VMC-Eu-BeP"/>
-                                            <constraint firstAttribute="trailing" secondItem="zbB-QD-OVu" secondAttribute="trailing" constant="18" id="dma-1K-ZtX"/>
                                             <constraint firstItem="4dQ-48-YwK" firstAttribute="centerY" secondItem="J1F-TR-BNQ" secondAttribute="centerY" id="gad-Mu-RWI"/>
+                                            <constraint firstItem="zbB-QD-OVu" firstAttribute="centerX" secondItem="J1F-TR-BNQ" secondAttribute="centerX" constant="50" id="gpl-eu-ShX"/>
                                             <constraint firstAttribute="bottom" secondItem="nmL-hk-gL7" secondAttribute="bottom" id="hNa-1O-tza"/>
                                         </constraints>
                                     </view>
@@ -308,7 +323,7 @@
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="transactionListButtonTapIn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="moz-yN-wjk"/>
+                                            <action selector="transactionListButtonTapIn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Ac1-qJ-0Bt"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -316,7 +331,7 @@
                                     <constraint firstAttribute="height" constant="40" id="Dlx-iR-7IJ"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQI-kB-34s">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQI-kB-34s" userLabel="Add Category">
                                 <rect key="frame" x="363" y="331" width="31" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="31" id="9Qc-A2-aUo"/>
@@ -377,6 +392,7 @@
                             <constraint firstItem="zlT-tO-aRF" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="23" id="zH8-Ea-2Jq"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="768-sO-1PW"/>
                     <connections>
                         <outlet property="addTransactionButtonOutlet" destination="BZd-8P-vro" id="AdJ-8O-gxA"/>
                         <outlet property="categoryTextFieldOutlet" destination="dPK-e3-DVd" id="YK4-5P-v6u"/>

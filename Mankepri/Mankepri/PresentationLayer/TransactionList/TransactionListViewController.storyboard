@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oU0-ha-O8g">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="agQ-6M-cFL">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="oU0-ha-O8g" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZTN-rs-kVN">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="C7L-mB-2WO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CPi-uk-Vam" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-751" y="64"/>
+        </scene>
+        <!--transactionListViewController-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="TransactionListViewController" title="transactionListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="TransactionListViewController" customModule="Mankepri" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X2d-py-Ghd">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daftar Transaksi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZH-aD-erp">
+                                        <rect key="frame" x="142" y="54.5" width="130.5" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="BaseColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="fZH-aD-erp" secondAttribute="bottom" constant="12" id="RWv-9H-PJ8"/>
+                                    <constraint firstAttribute="height" constant="88" id="UlE-xT-xng"/>
+                                    <constraint firstItem="fZH-aD-erp" firstAttribute="centerX" secondItem="X2d-py-Ghd" secondAttribute="centerX" id="wmq-C8-1Kv"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUJ-as-S7N">
+                                <rect key="frame" x="16" y="806" width="382" height="40"/>
+                                <color key="backgroundColor" name="BaseColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="jPA-Uv-qie"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="OK"/>
+                                <connections>
+                                    <action selector="okButtonTapIn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="6yA-oF-HuD"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="T1p-Z9-Zny">
+                                <rect key="frame" x="0.0" y="88" width="414" height="702"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="J71-7Z-8zn">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="J71-7Z-8zn" id="58U-e6-wW1">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="T1p-Z9-Zny" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="AJi-sQ-4GZ"/>
+                            <constraint firstItem="X2d-py-Ghd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Bc7-Ij-MjI"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="T1p-Z9-Zny" secondAttribute="trailing" id="CdC-gM-ai3"/>
+                            <constraint firstItem="X2d-py-Ghd" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="JHk-WM-cW2"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="aUJ-as-S7N" secondAttribute="bottom" constant="16" id="W5Y-nz-axu"/>
+                            <constraint firstItem="X2d-py-Ghd" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="cpE-wD-O7k"/>
+                            <constraint firstItem="T1p-Z9-Zny" firstAttribute="top" secondItem="X2d-py-Ghd" secondAttribute="bottom" id="kGU-OA-yd7"/>
+                            <constraint firstItem="aUJ-as-S7N" firstAttribute="top" secondItem="T1p-Z9-Zny" secondAttribute="bottom" constant="16" id="nOw-4p-js3"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="aUJ-as-S7N" secondAttribute="trailing" constant="16" id="xW1-1q-oaw"/>
+                            <constraint firstItem="aUJ-as-S7N" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="xra-1H-XxG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="m1T-ET-gYE"/>
+                    <connections>
+                        <outlet property="okButtonOutlet" destination="aUJ-as-S7N" id="pAx-nu-rTR"/>
+                        <outlet property="transactionListTableViewOutlet" destination="T1p-Z9-Zny" id="ls1-Du-tAv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46" y="64"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="BaseColor">
+            <color red="0.15299999713897705" green="0.56499999761581421" blue="0.5220000147819519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

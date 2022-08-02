@@ -93,8 +93,10 @@ final class TransactionViewController: UIViewController {
     }
     
     @IBAction func transactionListButtonTapIn(_ sender: Any) {
+        let storyBoard = UIStoryboard(name: "TransactionListViewController", bundle: nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "TransactionListViewController")
+        self.navigationController?.pushViewController(nextViewController, animated: true)
     }
-    
     
     @IBAction func tabBarButtonHomeTapIn(_ sender: Any) {
         let viewController = UIStoryboard(name: "HomeViewController", bundle:nil).instantiateViewController(withIdentifier: "HomeViewController")
