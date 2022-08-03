@@ -37,6 +37,7 @@
 		31D884322899C5A400824C90 /* TransactionListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D884302899C5A400824C90 /* TransactionListCell.swift */; };
 		31D884332899C5A400824C90 /* TransactionListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31D884312899C5A400824C90 /* TransactionListCell.xib */; };
 		31E1E6002899D027006F47D6 /* TransactionDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E1E5FF2899D027006F47D6 /* TransactionDataModel.swift */; };
+		31E1E6022899D2B2006F47D6 /* TransactionDataUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E1E6012899D2B2006F47D6 /* TransactionDataUserDefaults.swift */; };
 		744F76B640A9F9435AEA4212 /* Pods_Mankepri.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7B96A574B90F70BB9D73F2 /* Pods_Mankepri.framework */; };
 		813CE92FE2003C6FF79412E4 /* Pods_Mankepri_MankepriUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8882A8D05EB70C9524DF340 /* Pods_Mankepri_MankepriUITests.framework */; };
 /* End PBXBuildFile section */
@@ -92,6 +93,7 @@
 		31D884302899C5A400824C90 /* TransactionListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListCell.swift; sourceTree = "<group>"; };
 		31D884312899C5A400824C90 /* TransactionListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionListCell.xib; sourceTree = "<group>"; };
 		31E1E5FF2899D027006F47D6 /* TransactionDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDataModel.swift; sourceTree = "<group>"; };
+		31E1E6012899D2B2006F47D6 /* TransactionDataUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDataUserDefaults.swift; sourceTree = "<group>"; };
 		46A3A30D6ACB76950E365E35 /* Pods-Mankepri-MankepriUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mankepri-MankepriUITests.debug.xcconfig"; path = "Target Support Files/Pods-Mankepri-MankepriUITests/Pods-Mankepri-MankepriUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		552E70E7176279232AE9BAF7 /* Pods-Mankepri-MankepriUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mankepri-MankepriUITests.release.xcconfig"; path = "Target Support Files/Pods-Mankepri-MankepriUITests/Pods-Mankepri-MankepriUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5E44363471F3C1395F3FBAD3 /* Pods-MankepriTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MankepriTests.debug.xcconfig"; path = "Target Support Files/Pods-MankepriTests/Pods-MankepriTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 				312219D72893286D00C0CBBD /* BiometricSwitchUserDefaults.swift */,
 				312219D92893FCD700C0CBBD /* UsernameUserDefaults.swift */,
 				3169D82428970ED700EA3BC6 /* CategoryDataUserDefaults.swift */,
+				31E1E6012899D2B2006F47D6 /* TransactionDataUserDefaults.swift */,
 			);
 			path = UserDefaults;
 			sourceTree = "<group>";
@@ -607,6 +610,7 @@
 				3106B21D286E38B2009E50A5 /* AppDelegate.swift in Sources */,
 				3148434E28948C7500599106 /* InfoViewController.swift in Sources */,
 				31D884322899C5A400824C90 /* TransactionListCell.swift in Sources */,
+				31E1E6022899D2B2006F47D6 /* TransactionDataUserDefaults.swift in Sources */,
 				31AB277B2892B388001DA042 /* SettingViewController.swift in Sources */,
 				315E8CF128736E8E00E192A9 /* EnterViewController.swift in Sources */,
 				3106B251286E3F25009E50A5 /* CustomToast.swift in Sources */,

@@ -71,24 +71,32 @@ final class SettingViewController: UIViewController {
     }
     
     func resetButtonAlert() {
-        let alert = UIAlertController(title: "Peringatan!", message: "Anda akan menghapus data yang anda pilih.", preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "Batal", style: .cancel, handler: { ACTION in }))
-        alert.addAction(UIAlertAction(title: "Hapus Seluruh Data", style: .destructive) { ACTION in
-            if let domain = Bundle.main.bundleIdentifier {
-                UserDefaults.standard.removePersistentDomain(forName: domain)
-            }
-            CustomToast.show(
-                message: "Berhasil hapus seluruh data, \nSilahkan buka aplikasi kembali.",
-                bgColor: .systemGreen,
-                textColor: .white,
-                labelFont: .systemFont(ofSize: 17),
-                showIn: .bottom,
-                controller: self)
-            self.closeApp()
+        let alertResetButton = UIAlertController(
+            title: "Peringatan!",
+            message: "Anda akan menghapus data yang anda pilih.",
+            preferredStyle: .actionSheet)
+        
+        alertResetButton.addAction(UIAlertAction(
+            title: "Batal",
+            style: .cancel) { ACTION in })
+        alertResetButton.addAction(UIAlertAction(
+            title: "Hapus Seluruh Data",
+            style: .destructive) { ACTION in
+                if let domain = Bundle.main.bundleIdentifier {
+                    UserDefaults.standard.removePersistentDomain(forName: domain)
+                }
+                CustomToast.show(
+                    message: "Berhasil hapus seluruh data, \nSilahkan buka aplikasi kembali.",
+                    bgColor: .systemGreen,
+                    textColor: .white,
+                    labelFont: .systemFont(ofSize: 17),
+                    showIn: .bottom,
+                    controller: self)
+                self.closeApp()
         })
-        alert.addAction(UIAlertAction(
+        alertResetButton.addAction(UIAlertAction(
             title: "Hapus Kategori Pemasukan",
-            style: .destructive, handler: { ACTION in
+            style: .destructive) { ACTION in
                 CategoryDataIncomeDefaults.delete()
                 CustomToast.show(
                     message: "Berhasil hapus kategori pemasukan.",
@@ -98,11 +106,10 @@ final class SettingViewController: UIViewController {
                     showIn: .bottom,
                     controller: self)
 
-            }))
-        
-        alert.addAction(UIAlertAction(
+            })
+        alertResetButton.addAction(UIAlertAction(
             title: "Hapus Kategori Pengeluaran",
-            style: .destructive, handler: { ACTION in
+            style: .destructive) { ACTION in
                 CategoryDataSpendingDefaults.delete()
                 CustomToast.show(
                     message: "Berhasil hapus kategori pengeluaran.",
@@ -112,8 +119,9 @@ final class SettingViewController: UIViewController {
                     showIn: .bottom,
                     controller: self)
 
-            }))
-        self.present(alert, animated: true)
+            })
+        
+        self.present(alertResetButton, animated: true)
     }
     
     func closeApp(){
