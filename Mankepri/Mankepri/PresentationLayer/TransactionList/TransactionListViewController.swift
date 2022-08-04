@@ -9,6 +9,7 @@ import UIKit
 
 final class TransactionListViewController: UIViewController {
     
+    @IBOutlet weak var sortTransactionButtonOutlet: UIButton!
     @IBOutlet weak var transactionListTableViewOutlet: UITableView!
     @IBOutlet weak var noTransactionLabelOutlet: UILabel!
     @IBOutlet weak var okButtonOutlet: UIButton!
@@ -16,17 +17,7 @@ final class TransactionListViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if TransactionDataUserDefaults.check() == false {
-            transactionListTableViewOutlet.isHidden = true
-            noTransactionLabelOutlet.isHidden = false
-        } else {
-            transactionListTableViewOutlet.isHidden = false
-            noTransactionLabelOutlet.isHidden = true
-            transactionDataSorted = TransactionDataUserDefaults.get()
-            transactionDataSorted = transactionDataSorted.sorted(by: { $1.date.compare($0.date) == .orderedDescending
-            })
-            transactionListTableViewOutlet.reloadData()
-        }
+        checkTransactionDataLogic()
     }
     
     override func viewDidLoad() {
@@ -43,6 +34,35 @@ final class TransactionListViewController: UIViewController {
     
     @IBAction func okButtonTapIn(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    private func checkTransactionDataLogic() {
+        if TransactionDataUserDefaults.check() == true {
+            if transactionDataSorted.isEmpty {
+                transactionDataSorted = TransactionDataUserDefaults.get()
+                transactionDataSorted = transactionDataSorted.sorted(by: { $1.date.compare($0.date) == .orderedDescending
+                })
+                print(transactionDataSorted.count)
+                transactionListTableViewOutlet.reloadData()
+                if transactionDataSorted.isEmpty {
+                    sortTransactionButtonOutlet.isHidden = true
+                    transactionListTableViewOutlet.isHidden = true
+                    noTransactionLabelOutlet.isHidden = false
+                } else {
+                    sortTransactionButtonOutlet.isHidden = false
+                    transactionListTableViewOutlet.isHidden = false
+                    noTransactionLabelOutlet.isHidden = true
+                }
+            } else {
+                sortTransactionButtonOutlet.isHidden = true
+                transactionListTableViewOutlet.isHidden = true
+                noTransactionLabelOutlet.isHidden = false
+            }
+        } else {
+            sortTransactionButtonOutlet.isHidden = true
+            transactionListTableViewOutlet.isHidden = true
+            noTransactionLabelOutlet.isHidden = false
+        }
     }
     
     private func sortData() {
@@ -114,15 +134,24 @@ extension TransactionListViewController: UITableViewDelegate, UITableViewDataSou
         cell.transactionDescriptionLabelOutlet.text = "Keterangan: \(transactionDataCell.description)"
         return cell
     }
+    
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteTransactionData = UIContextualAction(
-            style: .destructive,
+            style: .normal,
             title: "Hapus Data") { action, view, completionHandler in
                 self.transactionDataSorted.remove(at: indexPath.row)
                 self.transactionListTableViewOutlet.deleteRows(at: [indexPath], with: .left)
                 self.transactionDataSorted = self.transactionDataSorted.sorted(by: { $0.date.compare($1.date) == .orderedDescending
                 })
                 TransactionDataUserDefaults.save(self.transactionDataSorted)
+                tableView.reloadData()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.75) {
+                    if self.transactionDataSorted.isEmpty == true {
+                        self.sortTransactionButtonOutlet.isHidden = true
+                        self.transactionListTableViewOutlet.isHidden = true
+                        self.noTransactionLabelOutlet.isHidden = false
+                    }
+                }
                 completionHandler(true)
             }
         deleteTransactionData.image = UIImage(systemName: "trash.fill")

@@ -128,6 +128,12 @@ final class TransactionViewController: UIViewController {
         self.present(viewController, animated: false, completion:nil)
     }
     
+    @IBAction func tabBarButtonInfoTapIn(_ sender: Any) {
+        let viewController = UIStoryboard(name: "InfoViewController", bundle:nil).instantiateViewController(withIdentifier: "InfoViewController")
+        viewController.modalPresentationStyle = .fullScreen
+        self.present(viewController, animated: false, completion:nil)
+    }
+    
     private func categoryDropDownIncome() {
         dropDownIncome.anchorView = categoryTextFieldOutlet
         dropDownIncome.dataSource = categoryDataIncome
@@ -193,7 +199,7 @@ final class TransactionViewController: UIViewController {
     private func addTransactionData() {
         let alertAddTransaction = UIAlertController(
             title: "Pengingat.",
-            message: "Pastikan data yang telah dimasukkan benar karena data tidak akan bisa dirubah.",
+            message: "Pastikan data yang telah dimasukkan benar karena data tidak akan bisa diubah  inf.",
             preferredStyle: .alert)
         if spendingLabelOutlet.textColor == .black {
             alertAddTransaction.addAction(UIAlertAction(title: "Batal", style: .destructive))

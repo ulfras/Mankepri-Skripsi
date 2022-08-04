@@ -122,6 +122,7 @@
                     <connections>
                         <outlet property="noTransactionLabelOutlet" destination="zji-Yp-EIm" id="Al9-HV-vcE"/>
                         <outlet property="okButtonOutlet" destination="aUJ-as-S7N" id="pAx-nu-rTR"/>
+                        <outlet property="sortTransactionButtonOutlet" destination="GaC-C9-QUy" id="8B9-Rg-DJD"/>
                         <outlet property="transactionListTableViewOutlet" destination="T1p-Z9-Zny" id="ls1-Du-tAv"/>
                     </connections>
                 </viewController>

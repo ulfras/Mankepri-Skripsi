@@ -10,15 +10,18 @@ import UIKit
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var welcomeMessageOutlet: UILabel!
+    @IBOutlet weak var totalSavingLabelOutlet: UILabel!
+    @IBOutlet weak var totalIncomeLabelOutlet: UILabel!
+    @IBOutlet weak var totalSpendingLabelOutlet: UILabel!
+    @IBOutlet weak var remainingBudgetLabelOutlet: UILabel!
+    @IBOutlet weak var totalBudgetLabelOutlet: UILabel!
+    
+    private var transactionData: [TransactionDataModel] = []
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if UsernameUserDefaults.check() == true {
-            let usernameDefaults = UsernameUserDefaults.get()
-            welcomeMessageOutlet.text = "Selamat Datang, \(usernameDefaults)"
-        } else {
-            welcomeMessageOutlet.text = "Selamat Datang, Pengguna"
-        }
+        checkUsernameDefaults()
+        
     }
     
     override func viewDidLoad() {
@@ -44,5 +47,20 @@ class HomeViewController: UIViewController {
         let viewController = UIStoryboard(name: "InfoViewController", bundle:nil).instantiateViewController(withIdentifier: "InfoViewController")
         viewController.modalPresentationStyle = .fullScreen
         self.present(viewController, animated: false, completion:nil)
+    }
+    
+    private func checkUsernameDefaults() {
+        if UsernameUserDefaults.check() == true {
+            let usernameDefaults = UsernameUserDefaults.get()
+            welcomeMessageOutlet.text = "Selamat Datang, \(usernameDefaults)"
+        } else {
+            welcomeMessageOutlet.text = "Selamat Datang, Pengguna"
+        }
+    }
+    
+    private func checkTransactionDataDefaults() {
+        if TransactionDataUserDefaults.check() == true {
+            transactionData = TransactionDataUserDefaults.get()
+        }
     }
 }

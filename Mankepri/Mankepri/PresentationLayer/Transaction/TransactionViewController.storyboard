@@ -229,6 +229,9 @@
                                                     <constraint firstAttribute="height" constant="40" id="vhh-D7-xGS"/>
                                                 </constraints>
                                                 <state key="normal" title="MenuInfo" image="iButtonGrey"/>
+                                                <connections>
+                                                    <action selector="tabBarButtonInfoTapIn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="dPP-uJ-vlM"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
