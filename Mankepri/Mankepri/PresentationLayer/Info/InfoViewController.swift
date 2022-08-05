@@ -29,4 +29,10 @@ final class InfoViewController: UIViewController {
         viewController.modalPresentationStyle = .fullScreen
         self.present(viewController, animated: false, completion:nil)
     }
+    
+    @IBAction func tabBarFinanceStatementsButtonTapIn(_ sender: Any) {
+        let viewController = UIStoryboard(name: "FinancialStatementsViewController", bundle:nil).instantiateViewController(withIdentifier: "FinancialStatementsViewController")
+        viewController.modalPresentationStyle = .fullScreen
+        self.present(viewController, animated: false, completion:nil)
+    }
 }

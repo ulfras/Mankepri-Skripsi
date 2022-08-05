@@ -29,7 +29,7 @@ final class TransactionListViewController: UIViewController {
     }
     
     @IBAction func transactionListSortButtonTapIn(_ sender: Any) {
-        sortData()
+        sortTransactionData()
     }
     
     @IBAction func okButtonTapIn(_ sender: Any) {
@@ -38,25 +38,18 @@ final class TransactionListViewController: UIViewController {
     
     private func checkTransactionDataLogic() {
         if TransactionDataUserDefaults.check() == true {
+            transactionDataSorted = TransactionDataUserDefaults.get()
+            transactionDataSorted = transactionDataSorted.sorted(by: { $1.date.compare($0.date) == .orderedDescending
+            })
+            transactionListTableViewOutlet.reloadData()
             if transactionDataSorted.isEmpty {
-                transactionDataSorted = TransactionDataUserDefaults.get()
-                transactionDataSorted = transactionDataSorted.sorted(by: { $1.date.compare($0.date) == .orderedDescending
-                })
-                print(transactionDataSorted.count)
-                transactionListTableViewOutlet.reloadData()
-                if transactionDataSorted.isEmpty {
-                    sortTransactionButtonOutlet.isHidden = true
-                    transactionListTableViewOutlet.isHidden = true
-                    noTransactionLabelOutlet.isHidden = false
-                } else {
-                    sortTransactionButtonOutlet.isHidden = false
-                    transactionListTableViewOutlet.isHidden = false
-                    noTransactionLabelOutlet.isHidden = true
-                }
-            } else {
                 sortTransactionButtonOutlet.isHidden = true
                 transactionListTableViewOutlet.isHidden = true
                 noTransactionLabelOutlet.isHidden = false
+            } else {
+                sortTransactionButtonOutlet.isHidden = false
+                transactionListTableViewOutlet.isHidden = false
+                noTransactionLabelOutlet.isHidden = true
             }
         } else {
             sortTransactionButtonOutlet.isHidden = true
@@ -65,7 +58,7 @@ final class TransactionListViewController: UIViewController {
         }
     }
     
-    private func sortData() {
+    private func sortTransactionData() {
         let sortAlert = UIAlertController(
             title: "Urutkan Transaksi",
             message: nil,
@@ -126,8 +119,9 @@ extension TransactionListViewController: UITableViewDelegate, UITableViewDataSou
         cell.transactionAmountLabelOutlet.text = "IDR \(transactionDataCell.money.formattedWithSeparator)  \(transactionDataCell.type)"
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        let date = dateFormatter.string(from: transactionDataCell.date)
+        let date = dateFormatter.convertDateToString(
+            from: transactionDataCell.date,
+            withFormat: "yyyy-MM-dd HH:mm:ss")
         cell.transactionDateLabelOutlet.text = "Tanggal: \(date)"
         
         cell.transactionCategoryLabelOutlet.text = "Kategori: \(transactionDataCell.category)"

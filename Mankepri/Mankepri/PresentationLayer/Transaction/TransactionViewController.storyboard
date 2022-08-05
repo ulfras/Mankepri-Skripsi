@@ -212,6 +212,9 @@
                                                     <constraint firstAttribute="height" constant="40" id="Flv-BX-Ezx"/>
                                                 </constraints>
                                                 <state key="normal" title="MenuLapKe" image="FinsStateGrey"/>
+                                                <connections>
+                                                    <action selector="tabBarFinanceStatementsButtonTapIn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="eHX-43-1d5"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>

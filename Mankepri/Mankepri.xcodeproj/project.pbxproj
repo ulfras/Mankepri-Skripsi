@@ -30,6 +30,9 @@
 		3169D82528970ED700EA3BC6 /* CategoryDataUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3169D82428970ED700EA3BC6 /* CategoryDataUserDefaults.swift */; };
 		3169D8272897948100EA3BC6 /* UITextFieldNumberFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3169D8262897948100EA3BC6 /* UITextFieldNumberFormatter+Extension.swift */; };
 		3169D82928979F5600EA3BC6 /* NumberFormater+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3169D82828979F5600EA3BC6 /* NumberFormater+Extension.swift */; };
+		317234B8289C453E0066326D /* FinancialStatementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317234B7289C453E0066326D /* FinancialStatementsViewController.swift */; };
+		317234BA289C455F0066326D /* FinancialStatementsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 317234B9289C455F0066326D /* FinancialStatementsViewController.storyboard */; };
+		317234BC289C95580066326D /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317234BB289C95580066326D /* DateFormatter+Extension.swift */; };
 		31AB27792892B37F001DA042 /* SettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31AB27782892B37F001DA042 /* SettingViewController.storyboard */; };
 		31AB277B2892B388001DA042 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AB277A2892B388001DA042 /* SettingViewController.swift */; };
 		31D8842C2899C3C700824C90 /* TransactionListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31D8842B2899C3C700824C90 /* TransactionListViewController.storyboard */; };
@@ -86,6 +89,9 @@
 		3169D82428970ED700EA3BC6 /* CategoryDataUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDataUserDefaults.swift; sourceTree = "<group>"; };
 		3169D8262897948100EA3BC6 /* UITextFieldNumberFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextFieldNumberFormatter+Extension.swift"; sourceTree = "<group>"; };
 		3169D82828979F5600EA3BC6 /* NumberFormater+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormater+Extension.swift"; sourceTree = "<group>"; };
+		317234B7289C453E0066326D /* FinancialStatementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinancialStatementsViewController.swift; sourceTree = "<group>"; };
+		317234B9289C455F0066326D /* FinancialStatementsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FinancialStatementsViewController.storyboard; sourceTree = "<group>"; };
+		317234BB289C95580066326D /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extension.swift"; sourceTree = "<group>"; };
 		31AB27782892B37F001DA042 /* SettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingViewController.storyboard; sourceTree = "<group>"; };
 		31AB277A2892B388001DA042 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		31D8842B2899C3C700824C90 /* TransactionListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransactionListViewController.storyboard; sourceTree = "<group>"; };
@@ -196,13 +202,14 @@
 		3106B24D286E3ED3009E50A5 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
-				31D8842A2899C3B300824C90 /* TransactionList */,
+				315E8CED28736E4E00E192A9 /* Enter */,
+				317234B6289C44F90066326D /* FinancialStatements */,
+				3106B255286E3FE3009E50A5 /* Home */,
 				3148434C28948C6800599106 /* Info */,
 				3106B256286E3FEB009E50A5 /* LaunhScreen */,
-				315E8CED28736E4E00E192A9 /* Enter */,
 				31AB27772892B368001DA042 /* Setting */,
-				3106B255286E3FE3009E50A5 /* Home */,
 				314843532896F98200599106 /* Transaction */,
+				31D8842A2899C3B300824C90 /* TransactionList */,
 			);
 			path = PresentationLayer;
 			sourceTree = "<group>";
@@ -231,6 +238,7 @@
 				3106B252286E3F4F009E50A5 /* UIViewController+Extension.swift */,
 				3169D8262897948100EA3BC6 /* UITextFieldNumberFormatter+Extension.swift */,
 				3169D82828979F5600EA3BC6 /* NumberFormater+Extension.swift */,
+				317234BB289C95580066326D /* DateFormatter+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -297,6 +305,15 @@
 				315E8CF028736E8E00E192A9 /* EnterViewController.swift */,
 			);
 			path = Enter;
+			sourceTree = "<group>";
+		};
+		317234B6289C44F90066326D /* FinancialStatements */ = {
+			isa = PBXGroup;
+			children = (
+				317234B7289C453E0066326D /* FinancialStatementsViewController.swift */,
+				317234B9289C455F0066326D /* FinancialStatementsViewController.storyboard */,
+			);
+			path = FinancialStatements;
 			sourceTree = "<group>";
 		};
 		31AB27772892B368001DA042 /* Setting */ = {
@@ -470,6 +487,7 @@
 				31D8842C2899C3C700824C90 /* TransactionListViewController.storyboard in Resources */,
 				3106B229286E38B4009E50A5 /* LaunchScreen.storyboard in Resources */,
 				315E8CEF28736E7600E192A9 /* EnterViewController.storyboard in Resources */,
+				317234BA289C455F0066326D /* FinancialStatementsViewController.storyboard in Resources */,
 				31AB27792892B37F001DA042 /* SettingViewController.storyboard in Resources */,
 				3148435028948CA200599106 /* InfoViewController.storyboard in Resources */,
 				314843572896F9DD00599106 /* TransactionViewController.storyboard in Resources */,
@@ -606,10 +624,12 @@
 				312219D82893286D00C0CBBD /* BiometricSwitchUserDefaults.swift in Sources */,
 				31D8842E2899C3CD00824C90 /* TransactionListViewController.swift in Sources */,
 				3106B221286E38B2009E50A5 /* HomeViewController.swift in Sources */,
+				317234B8289C453E0066326D /* FinancialStatementsViewController.swift in Sources */,
 				312219DA2893FCD700C0CBBD /* UsernameUserDefaults.swift in Sources */,
 				3106B21D286E38B2009E50A5 /* AppDelegate.swift in Sources */,
 				3148434E28948C7500599106 /* InfoViewController.swift in Sources */,
 				31D884322899C5A400824C90 /* TransactionListCell.swift in Sources */,
+				317234BC289C95580066326D /* DateFormatter+Extension.swift in Sources */,
 				31E1E6022899D2B2006F47D6 /* TransactionDataUserDefaults.swift in Sources */,
 				31AB277B2892B388001DA042 /* SettingViewController.swift in Sources */,
 				315E8CF128736E8E00E192A9 /* EnterViewController.swift in Sources */,

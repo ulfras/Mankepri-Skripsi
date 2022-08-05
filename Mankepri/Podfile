@@ -5,6 +5,7 @@ target 'Mankepri' do
   use_frameworks!
   pod 'IQKeyboardManagerSwift'
   pod 'DropDown'
+  pod 'Charts'
 
   # Pods for Mankepri
 
