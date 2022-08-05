@@ -158,6 +158,9 @@
                                                     <constraint firstAttribute="width" constant="40" id="rz5-pb-GXE"/>
                                                 </constraints>
                                                 <state key="normal" title="MenuAnggaran" image="BudgetGrey"/>
+                                                <connections>
+                                                    <action selector="tabBarBudgetButtonTapIn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="iZO-Yx-3zS"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>

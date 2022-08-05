@@ -40,6 +40,14 @@ class HomeViewController: UIViewController {
         self.navigationController?.pushViewController(nextViewController, animated: true)
     }
     
+    @IBAction func tabBarBudgetButtonTapIn(_ sender: Any) {
+        let viewController = UIStoryboard(name: "BudgetViewController", bundle:nil).instantiateViewController(withIdentifier: "BudgetViewController")
+        let navBarController = UINavigationController(rootViewController: viewController)
+        navBarController.modalPresentationStyle = .fullScreen
+        navBarController.navigationBar.isHidden = true
+        self.present(navBarController, animated: false, completion:nil)
+    }
+    
     @IBAction func tabBarTransactionButtonTapIn(_ sender: Any) {
         let viewController = UIStoryboard(name: "TransactionViewController", bundle:nil).instantiateViewController(withIdentifier: "TransactionViewController")
         let navBarController = UINavigationController(rootViewController: viewController)

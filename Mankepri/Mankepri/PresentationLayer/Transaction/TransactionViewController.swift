@@ -122,6 +122,14 @@ final class TransactionViewController: UIViewController {
         self.navigationController?.pushViewController(nextViewController, animated: true)
     }
     
+    @IBAction func tabBarBudgetButtonTapIn(_ sender: Any) {
+        let viewController = UIStoryboard(name: "BudgetViewController", bundle:nil).instantiateViewController(withIdentifier: "BudgetViewController")
+        let navBarController = UINavigationController(rootViewController: viewController)
+        navBarController.modalPresentationStyle = .fullScreen
+        navBarController.navigationBar.isHidden = true
+        self.present(navBarController, animated: false, completion:nil)
+    }
+    
     @IBAction func tabBarButtonHomeTapIn(_ sender: Any) {
         let viewController = UIStoryboard(name: "HomeViewController", bundle:nil).instantiateViewController(withIdentifier: "HomeViewController")
         viewController.modalPresentationStyle = .fullScreen

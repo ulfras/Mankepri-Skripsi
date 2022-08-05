@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="ma2-89-XPF">
+            <objects>
+                <navigationController useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="sVK-gL-ffU" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wyb-Pm-gnU">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="y3z-if-ew9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nlp-IO-Wcm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-667" y="42"/>
+        </scene>
+        <!--Budget View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="BudgetViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="BudgetViewController" customModule="Mankepri" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gqa-0I-gX7" userLabel="TopBar">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anggaran" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A17-lu-4NA">
+                                        <rect key="frame" x="16" y="54.5" width="382" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="BaseColor"/>
+                                <constraints>
+                                    <constraint firstItem="A17-lu-4NA" firstAttribute="leading" secondItem="Gqa-0I-gX7" secondAttribute="leading" constant="16" id="2AH-I5-Orf"/>
+                                    <constraint firstAttribute="height" constant="88" id="ORm-fg-dUe"/>
+                                    <constraint firstAttribute="trailing" secondItem="A17-lu-4NA" secondAttribute="trailing" constant="16" id="Tqd-x2-m8P"/>
+                                    <constraint firstAttribute="bottom" secondItem="A17-lu-4NA" secondAttribute="bottom" constant="12" id="bzA-I8-K9P"/>
+                                    <constraint firstAttribute="bottom" secondItem="A17-lu-4NA" secondAttribute="bottom" constant="12" id="eJ3-AC-4eo"/>
+                                    <constraint firstItem="A17-lu-4NA" firstAttribute="centerX" secondItem="Gqa-0I-gX7" secondAttribute="centerX" id="zyF-JW-15z"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1T8-i3-Vo7" userLabel="TabBarBorder">
+                                <rect key="frame" x="0.0" y="814" width="414" height="2"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="bOM-EV-r7e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="center" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="aRe-vI-UzM" userLabel="TabBarStackView">
+                                <rect key="frame" x="23" y="816" width="368" height="80"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zvo-fB-BxR">
+                                        <rect key="frame" x="0.0" y="0.0" width="61.5" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPP-Ct-iIA">
+                                                <rect key="frame" x="11" y="15" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="bSy-6F-0JB"/>
+                                                    <constraint firstAttribute="height" constant="40" id="chB-5b-Flk"/>
+                                                </constraints>
+                                                <state key="normal" title="MenuAnggaran" image="BudgetColor"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="TPP-Ct-iIA" firstAttribute="centerX" secondItem="Zvo-fB-BxR" secondAttribute="centerX" id="b98-QJ-xaQ"/>
+                                            <constraint firstItem="TPP-Ct-iIA" firstAttribute="top" secondItem="Zvo-fB-BxR" secondAttribute="top" constant="15" id="fXD-fm-RBm"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xzf-fe-JsH">
+                                        <rect key="frame" x="76.5" y="0.0" width="61.5" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OyR-Oo-li1">
+                                                <rect key="frame" x="11" y="15" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="0kZ-H7-JNG"/>
+                                                    <constraint firstAttribute="height" constant="40" id="TnQ-LX-Qrr"/>
+                                                </constraints>
+                                                <state key="normal" title="MenuTransaksi" image="CashFlowGrey"/>
+                                                <connections>
+                                                    <action selector="tabBarTransactionButtonTapIn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="u5Z-Kr-BNc"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="OyR-Oo-li1" firstAttribute="top" secondItem="Xzf-fe-JsH" secondAttribute="top" constant="15" id="4va-2l-cPR"/>
+                                            <constraint firstItem="OyR-Oo-li1" firstAttribute="centerX" secondItem="Xzf-fe-JsH" secondAttribute="centerX" id="m8d-fr-Xm3"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cTv-gW-3HH">
+                                        <rect key="frame" x="153" y="0.0" width="62" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zmd-7e-8YT">
+                                                <rect key="frame" x="0.5" y="8" width="61" height="54"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="61" id="PlA-00-A1r"/>
+                                                    <constraint firstAttribute="height" constant="54" id="mcs-XU-dWb"/>
+                                                </constraints>
+                                                <state key="normal" title="Home" image="AppLogoMini"/>
+                                                <connections>
+                                                    <action selector="tabBarButtonHomeTapIn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="zcP-j3-txW"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="zmd-7e-8YT" firstAttribute="top" secondItem="cTv-gW-3HH" secondAttribute="top" constant="8" id="66e-Bv-4CN"/>
+                                            <constraint firstItem="zmd-7e-8YT" firstAttribute="centerX" secondItem="cTv-gW-3HH" secondAttribute="centerX" id="xDE-uf-qHp"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2UX-17-yuq">
+                                        <rect key="frame" x="230" y="0.0" width="61.5" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RGT-0o-azx">
+                                                <rect key="frame" x="14.5" y="15" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="NyE-EC-aem"/>
+                                                    <constraint firstAttribute="width" constant="40" id="a0n-gY-Aq5"/>
+                                                </constraints>
+                                                <state key="normal" title="MenuLapKe" image="FinsStateGrey"/>
+                                                <connections>
+                                                    <action selector="tabBarFinanceStatementsButtonTapIn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="zQ8-XB-42Q"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="RGT-0o-azx" firstAttribute="centerX" secondItem="2UX-17-yuq" secondAttribute="centerX" constant="4" id="7CW-cR-iRr"/>
+                                            <constraint firstItem="RGT-0o-azx" firstAttribute="top" secondItem="2UX-17-yuq" secondAttribute="top" constant="15" id="vxh-5m-3bs"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AJS-sF-eiq">
+                                        <rect key="frame" x="306.5" y="0.0" width="61.5" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Edu-Tt-8cF">
+                                                <rect key="frame" x="10.5" y="15" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="5gS-0W-DZS"/>
+                                                    <constraint firstAttribute="height" constant="40" id="y0E-hi-muY"/>
+                                                </constraints>
+                                                <state key="normal" title="MenuInfo" image="iButtonGrey"/>
+                                                <connections>
+                                                    <action selector="tabBarInfoButtonTapIn:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="5Mc-V5-ahW"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Edu-Tt-8cF" firstAttribute="centerX" secondItem="AJS-sF-eiq" secondAttribute="centerX" id="GhN-Sr-bmh"/>
+                                            <constraint firstItem="Edu-Tt-8cF" firstAttribute="top" secondItem="AJS-sF-eiq" secondAttribute="top" constant="15" id="Pf8-6S-vAg"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="fhd-Hk-94R"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Gqa-0I-gX7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="BW8-M7-eTD"/>
+                            <constraint firstItem="Gqa-0I-gX7" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="PUQ-4D-DmB"/>
+                            <constraint firstItem="aRe-vI-UzM" firstAttribute="top" secondItem="1T8-i3-Vo7" secondAttribute="bottom" id="Qh5-V7-bth"/>
+                            <constraint firstAttribute="bottom" secondItem="aRe-vI-UzM" secondAttribute="bottom" id="WdI-0c-dt1"/>
+                            <constraint firstItem="aRe-vI-UzM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="23" id="cjy-Pz-7zI"/>
+                            <constraint firstAttribute="trailing" secondItem="1T8-i3-Vo7" secondAttribute="trailing" id="dQ0-P6-JfU"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="aRe-vI-UzM" secondAttribute="trailing" constant="23" id="f9k-ev-Jfv"/>
+                            <constraint firstItem="Gqa-0I-gX7" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="qbe-Lz-dam"/>
+                            <constraint firstItem="1T8-i3-Vo7" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="yvm-Yw-Nj8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Uuh-2z-58Z"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46" y="42"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AppLogoMini" width="105.5" height="92"/>
+        <image name="BudgetColor" width="128" height="128"/>
+        <image name="CashFlowGrey" width="128" height="128"/>
+        <image name="FinsStateGrey" width="128" height="128"/>
+        <image name="iButtonGrey" width="150" height="155"/>
+        <namedColor name="BaseColor">
+            <color red="0.15299999713897705" green="0.56499999761581421" blue="0.5220000147819519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
