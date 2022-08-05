@@ -37,6 +37,8 @@ final class FinancialStatementsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         transactionDataDefaultsConditionConfig()
+        pieChartConfig()
+        labelOutletConfig()
     }
     
     override func viewDidLoad() {
@@ -80,8 +82,6 @@ final class FinancialStatementsViewController: UIViewController {
                 let minDate = DateFormatter().convertDateToString(from: minDateTransaction, withFormat: "dd MMM yyyy")
                 let maxDate = DateFormatter().convertDateToString(from: maxDateTransaction, withFormat: "dd MMM yyyy")
                 betweenDateTransactionLabelOutlet.text = "\(minDate) sampai \(maxDate)"
-                pieChartConfig()
-                labelOutletConfig()
             } else {
                 pieChartViewOutlet.noDataText = "Tidak ada data transaksi."
             }

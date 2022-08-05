@@ -26,30 +26,15 @@ final class TransactionViewController: UIViewController {
     
     private let dropDownIncome = DropDown()
     private let dropDownSpending = DropDown()
-    private var categoryDataIncome: [String] = ["Gaji", "Bonus", "Hadiah", "Pinjaman"]
-    private var categoryDataSpending: [String] = ["Konsumsi", "Belanja Umum", "Belanja Online", "Transportasi"]
-    var transactionData:[TransactionDataModel] = []
+    private var categoryDataIncome: [String] = ["Gaji", "Hadiah", "Pinjaman"]
+    private var categoryDataSpending: [String] = ["Konsumsi", "Belanja", "Transportasi"]
+    private var transactionData:[TransactionDataModel] = []
+    private var spendingBudgetData: [TransactionDataModel] = []
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        if TransactionDataUserDefaults.check() == true {
-            transactionData = TransactionDataUserDefaults.get()
-        }
-        
-        if CategoryDataIncomeDefaults.check() == true {
-            categoryDataIncome = CategoryDataIncomeDefaults.get()
-        }
-        categoryDropDownIncome()
-        
-        if CategoryDataSpendingDefaults.check() == true {
-            categoryDataSpending = CategoryDataSpendingDefaults.get()
-        }
-        categoryDropDownSpending()
-        
-        if TransactionDataUserDefaults.check() == true {
-            transactionData = TransactionDataUserDefaults.get()
-        }
+        checkTransactionDataDefaults()
+        checkBudgetSpendingData()
     }
     
     override func viewDidLoad() {
@@ -148,6 +133,32 @@ final class TransactionViewController: UIViewController {
         self.present(viewController, animated: false, completion:nil)
     }
     
+    private func checkBudgetSpendingData() {
+        if SpendingBudgetUserDefaults.check() == true {
+            spendingBudgetData = SpendingBudgetUserDefaults.get()
+        }
+    }
+    
+    private func checkTransactionDataDefaults() {
+        if TransactionDataUserDefaults.check() == true {
+            transactionData = TransactionDataUserDefaults.get()
+        }
+        
+        if CategoryDataIncomeDefaults.check() == true {
+            categoryDataIncome = CategoryDataIncomeDefaults.get()
+        }
+        categoryDropDownIncome()
+        
+        if CategoryDataSpendingDefaults.check() == true {
+            categoryDataSpending = CategoryDataSpendingDefaults.get()
+        }
+        categoryDropDownSpending()
+        
+        if TransactionDataUserDefaults.check() == true {
+            transactionData = TransactionDataUserDefaults.get()
+        }
+    }
+    
     private func categoryDropDownIncome() {
         dropDownIncome.anchorView = categoryTextFieldOutlet
         dropDownIncome.dataSource = categoryDataIncome
@@ -230,6 +241,16 @@ final class TransactionViewController: UIViewController {
                         type: "DB")
                     )
                     TransactionDataUserDefaults.save(self.transactionData)
+                    
+                    self.spendingBudgetData.append(TransactionDataModel(
+                        money: Int(money)!,
+                        category: self.categoryTextFieldOutlet.text!,
+                        description: self.descriptionTextFieldOutlet.text!,
+                        date: Date(),
+                        type: "DB")
+                    )
+                    SpendingBudgetUserDefaults.save(self.spendingBudgetData)
+                    
                     CustomToast.show(message: "Transaksi Pengeluaran Berhasil Terdata.",
                                      bgColor: .systemGreen,
                                      textColor: .white,
