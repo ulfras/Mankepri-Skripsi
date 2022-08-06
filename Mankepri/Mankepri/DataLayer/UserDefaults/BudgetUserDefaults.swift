@@ -10,6 +10,7 @@ import Foundation
 struct BudgetUserDefaults {
     static let key = "Budget"
     static let userDefaults = UserDefaults.standard
+    
     static func save(_ value: Int) {
         userDefaults.set(value, forKey: key)
     }

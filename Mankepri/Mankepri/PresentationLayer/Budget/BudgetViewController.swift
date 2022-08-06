@@ -21,9 +21,8 @@ class BudgetViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        checkBudgetSpendingDefaults()
         checkBudgetDefaults()
-        labelOutletConfig()
+        checkBudgetSpendingDefaults()
     }
     
     override func viewDidLoad() {
@@ -32,6 +31,41 @@ class BudgetViewController: UIViewController {
     }
     
     @IBAction func createBudgetButtonTapIn(_ sender: Any) {
+        addBudget()
+    }
+    
+    private func checkBudgetDefaults() {
+        if BudgetUserDefaults.check() == false {
+            remainingBudgetLabelOutlet.text = "IDR 0"
+            totalBudgetLabelOutlet.text = "0"
+            totalBudgetSpendingLabelOutlet.text = "0"
+        } else {
+            totalBudget = BudgetUserDefaults.get()
+            totalBudgetLabelOutlet.text = totalBudget.formattedWithSeparator
+        }
+    }
+    
+    private func checkBudgetSpendingDefaults() {
+        if SpendingBudgetUserDefaults.check() == false {
+            totalBudgetSpendingLabelOutlet.text = "0"
+            remainingBudgetLabelOutlet.text = BudgetUserDefaults.get().formattedWithSeparator
+        } else {
+            spendingBudgetData = SpendingBudgetUserDefaults.get()
+            for spendingBudgetDatum in spendingBudgetData {
+               totalBudgetSpending = totalBudgetSpending + spendingBudgetDatum.money
+           }
+            totalBudgetSpendingLabelOutlet.text = totalBudgetSpending.formattedWithSeparator
+            
+            remainingBudget = totalBudget - totalBudgetSpending
+            if remainingBudget <= 0 {
+                remainingBudgetLabelOutlet.text = "IDR 0"
+            } else {
+                remainingBudgetLabelOutlet.text = remainingBudget.formattedWithSeparator
+            }
+        }
+    }
+    
+    private func addBudget() {
         let budgetAlert = UIAlertController(
             title: "Buat Anggaran",
             message: nil,
@@ -57,40 +91,10 @@ class BudgetViewController: UIViewController {
                     labelFont: .systemFont(ofSize: 17),
                     showIn: .bottom,
                     controller: self)
+                self.checkBudgetDefaults()
+                self.checkBudgetSpendingDefaults()
             }))
         self.present(budgetAlert, animated: true)
-    }
-    
-    private func checkBudgetSpendingDefaults() {
-        if SpendingBudgetUserDefaults.check() == false {
-            totalBudgetSpendingLabelOutlet.text = "0"
-        } else {
-            spendingBudgetData = SpendingBudgetUserDefaults.get()
-            for spendingBudgetDatum in spendingBudgetData {
-                totalBudgetSpending = totalBudgetSpending + spendingBudgetDatum.money
-            }
-            totalBudgetSpendingLabelOutlet.text = totalBudgetSpending.formattedWithSeparator
-        }
-    }
-    
-    private func checkBudgetDefaults() {
-        if BudgetUserDefaults.check() == false {
-            totalBudgetLabelOutlet.text = "IDR 0"
-            remainingBudgetLabelOutlet.text = "0"
-        } else {
-            totalBudget = BudgetUserDefaults.get()
-            remainingBudget = totalBudget - totalBudgetSpending
-        }
-    }
-    
-    private func labelOutletConfig() {
-        if remainingBudget <= 0 {
-            totalBudgetLabelOutlet.text = "IDR 0"
-            remainingBudgetLabelOutlet.text = "0"
-        } else {
-            totalBudgetLabelOutlet.text = totalBudget.formattedWithSeparator
-            remainingBudgetLabelOutlet.text = "IDR \(remainingBudget.formattedWithSeparator)"
-        }
     }
     
     @IBAction func tabBarTransactionButtonTapIn(_ sender: Any) {

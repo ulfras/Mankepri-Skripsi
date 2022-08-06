@@ -10,9 +10,11 @@ import Foundation
 struct UsernameUserDefaults {
     static let key = "Username"
     static let userDefaults = UserDefaults.standard
+    
     static func save(_ value: String) {
         userDefaults.set(value, forKey: key)
     }
+    
     static func get() -> String {
         return userDefaults.string(forKey: key)!
     }

@@ -17,17 +17,19 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var totalBudgetLabelOutlet: UILabel!
     
     private var transactionData: [TransactionDataModel] = []
+    private var spendingBudgetData: [TransactionDataModel] = []
     private var totalSaving: Int = 0
     private var totalIncome: Int = 0
     private var totalSpending: Int = 0
     private var remainingBudget: Int = 0
     private var totalBudget: Int = 0
+    private var totalBudgetSpending: Int = 0
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         checkUsernameDefaults()
         checkTransactionDataDefaults()
-        checkBudgetDefaults()
+        budgetDataConfig()
     }
     
     override func viewDidLoad() {
@@ -71,25 +73,27 @@ class HomeViewController: UIViewController {
         }
     }
     
-    private func checkBudgetDefaults() {
+    private func budgetDataConfig() {
         if BudgetUserDefaults.check() == false {
-            totalBudgetLabelOutlet.text = "IDR 0"
-            remainingBudgetLabelOutlet.text = "0"
+            totalBudgetLabelOutlet.text = "0"
+            remainingBudgetLabelOutlet.text = "IDR 0"
         } else {
-            totalBudget = BudgetUserDefaults.get()
-            if totalBudget == 0 || totalBudget < 0 {
-                totalBudgetLabelOutlet.text = "IDR 0"
-                remainingBudgetLabelOutlet.text = "0"
-            } else {
-                if (totalBudget - totalIncome) < 0 {
-                    totalBudgetLabelOutlet.text = totalBudget.formattedWithSeparator
-                    remainingBudgetLabelOutlet.text = "IDR 0"
-                } else {
-                    totalBudgetLabelOutlet.text = totalBudget.formattedWithSeparator
-                    remainingBudgetLabelOutlet.text = "IDR \((totalBudget - totalIncome).formattedWithSeparator)"
-                    
+            if SpendingBudgetUserDefaults.check() == true {
+                spendingBudgetData = SpendingBudgetUserDefaults.get()
+                for spendingBudgetDatum in spendingBudgetData {
+                    totalBudgetSpending = totalBudgetSpending + spendingBudgetDatum.money
                 }
             }
+            totalBudget = BudgetUserDefaults.get()
+            remainingBudget = totalBudget - totalBudgetSpending
+        }
+        
+        if remainingBudget <= 0 {
+            totalBudgetLabelOutlet.text = totalBudget.formattedWithSeparator
+            remainingBudgetLabelOutlet.text = "IDR 0"
+        } else {
+            totalBudgetLabelOutlet.text = totalBudget.formattedWithSeparator
+            remainingBudgetLabelOutlet.text = "IDR \(remainingBudget.formattedWithSeparator)"
         }
     }
     
