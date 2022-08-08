@@ -62,9 +62,15 @@ class HomeViewController: UIViewController {
                     }
                 }
                 totalSaving = totalIncome - totalSpending
-                totalSavingLabelOutlet.text = "IDR \(totalSaving.formattedWithSeparator)"
-                totalIncomeLabelOutlet.text = "\(totalIncome.formattedWithSeparator)"
-                totalSpendingLabelOutlet.text = "\(totalSpending.formattedWithSeparator)"
+                if totalSaving <= 0 {
+                    totalSavingLabelOutlet.text = "IDR 0"
+                    totalIncomeLabelOutlet.text = "\(totalIncome.formattedWithSeparator)"
+                    totalSpendingLabelOutlet.text = "\(totalSpending.formattedWithSeparator)"
+                } else {
+                    totalSavingLabelOutlet.text = "IDR \(totalSaving.formattedWithSeparator)"
+                    totalIncomeLabelOutlet.text = "\(totalIncome.formattedWithSeparator)"
+                    totalSpendingLabelOutlet.text = "\(totalSpending.formattedWithSeparator)"
+                }
             }
         } else {
             totalSavingLabelOutlet.text = "IDR 0"

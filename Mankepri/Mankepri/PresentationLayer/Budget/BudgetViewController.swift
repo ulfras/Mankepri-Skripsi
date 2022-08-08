@@ -21,8 +21,9 @@ class BudgetViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        checkBudgetDefaults()
-        checkBudgetSpendingDefaults()
+        budgetLogicConfiguration()
+//        checkBudgetDefaults()
+//        checkBudgetSpendingDefaults()
     }
     
     override func viewDidLoad() {
@@ -34,6 +35,40 @@ class BudgetViewController: UIViewController {
         addBudget()
     }
     
+    private func budgetLogicConfiguration() {
+        if BudgetUserDefaults.check() == false {
+            remainingBudgetLabelOutlet.text = "IDR 0"
+            totalBudgetLabelOutlet.text = "0"
+            totalBudgetSpendingLabelOutlet.text = "0"
+        } else {
+            totalBudget = BudgetUserDefaults.get()
+            remainingBudgetLabelOutlet.text = "IDR \(totalBudget.formattedWithSeparator)"
+            totalBudgetLabelOutlet.text = totalBudget.formattedWithSeparator
+            totalBudgetSpendingLabelOutlet.text = "0"
+            if SpendingBudgetUserDefaults.check() == false {
+                remainingBudgetLabelOutlet.text = "IDR \(totalBudget.formattedWithSeparator)"
+                totalBudgetLabelOutlet.text = totalBudget.formattedWithSeparator
+                totalBudgetSpendingLabelOutlet.text = "0"
+            } else {
+                spendingBudgetData = SpendingBudgetUserDefaults.get()
+                for spendingBudgetDatum in spendingBudgetData {
+                   totalBudgetSpending = totalBudgetSpending + spendingBudgetDatum.money
+                }
+                remainingBudget = totalBudget - totalBudgetSpending
+                if remainingBudget <= 0 {
+                    remainingBudgetLabelOutlet.text = "IDR 0"
+                    totalBudgetLabelOutlet.text = totalBudget.formattedWithSeparator
+                    totalBudgetSpendingLabelOutlet.text = totalBudgetSpending.formattedWithSeparator
+                } else {
+                    remainingBudgetLabelOutlet.text = "IDR \((totalBudget - totalBudgetSpending).formattedWithSeparator)"
+                    totalBudgetLabelOutlet.text = totalBudget.formattedWithSeparator
+                    totalBudgetSpendingLabelOutlet.text = totalBudgetSpending.formattedWithSeparator
+                }
+            }
+        }
+    }
+    
+    //MARK: - Border Code
     private func checkBudgetDefaults() {
         if BudgetUserDefaults.check() == false {
             remainingBudgetLabelOutlet.text = "IDR 0"
