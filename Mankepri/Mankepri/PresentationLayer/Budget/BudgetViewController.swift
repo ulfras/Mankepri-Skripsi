@@ -22,8 +22,6 @@ class BudgetViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         budgetLogicConfiguration()
-//        checkBudgetDefaults()
-//        checkBudgetSpendingDefaults()
     }
     
     override func viewDidLoad() {

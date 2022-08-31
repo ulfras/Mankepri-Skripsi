@@ -121,7 +121,7 @@ extension TransactionListViewController: UITableViewDelegate, UITableViewDataSou
         let dateFormatter = DateFormatter()
         let date = dateFormatter.convertDateToString(
             from: transactionDataCell.date,
-            withFormat: "yyyy-MM-dd HH:mm:ss")
+            withFormat: "dd MMM yyyy HH:mm:ss")
         cell.transactionDateLabelOutlet.text = "Tanggal: \(date)"
         
         cell.transactionCategoryLabelOutlet.text = "Kategori: \(transactionDataCell.category)"

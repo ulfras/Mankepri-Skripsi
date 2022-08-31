@@ -224,7 +224,7 @@ final class TransactionViewController: UIViewController {
     private func addTransactionData() {
         let alertAddTransaction = UIAlertController(
             title: "Pengingat.",
-            message: "Pastikan data yang telah dimasukkan benar karena data tidak akan bisa diubah  inf.",
+            message: "Pastikan data yang telah dimasukkan benar karena data tidak akan bisa diubah.",
             preferredStyle: .alert)
         if spendingLabelOutlet.textColor == .black {
             alertAddTransaction.addAction(UIAlertAction(title: "Batal", style: .destructive))

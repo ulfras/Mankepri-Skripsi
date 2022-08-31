@@ -253,8 +253,8 @@
 		3106B255286E3FE3009E50A5 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				3106B220286E38B2009E50A5 /* HomeViewController.swift */,
 				3106B222286E38B2009E50A5 /* HomeViewController.storyboard */,
+				3106B220286E38B2009E50A5 /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
