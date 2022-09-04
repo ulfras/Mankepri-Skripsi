@@ -841,6 +841,8 @@
 				DEVELOPMENT_TEAM = UT5GP7P326;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mankepri/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Penkepri;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Berikan akses Biometric.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = EnterViewController;
@@ -871,6 +873,8 @@
 				DEVELOPMENT_TEAM = UT5GP7P326;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mankepri/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Penkepri;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Berikan akses Biometric.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = EnterViewController;

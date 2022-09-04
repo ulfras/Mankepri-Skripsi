@@ -24,7 +24,7 @@
                                     <constraint firstAttribute="height" constant="350" id="zeK-Le-tZG"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MANKEPRI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHj-CN-8Ne">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PENKEPRI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHj-CN-8Ne">
                                 <rect key="frame" x="132" y="631" width="150" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="9Rp-aW-VCl"/>

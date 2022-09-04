@@ -131,12 +131,10 @@ extension TransactionListViewController: UITableViewDelegate, UITableViewDataSou
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteTransactionData = UIContextualAction(
-            style: .normal,
+            style: .destructive,
             title: "Hapus Data") { action, view, completionHandler in
                 self.transactionDataSorted.remove(at: indexPath.row)
                 self.transactionListTableViewOutlet.deleteRows(at: [indexPath], with: .left)
-                self.transactionDataSorted = self.transactionDataSorted.sorted(by: { $0.date.compare($1.date) == .orderedDescending
-                })
                 TransactionDataUserDefaults.save(self.transactionDataSorted)
                 tableView.reloadData()
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.75) {
